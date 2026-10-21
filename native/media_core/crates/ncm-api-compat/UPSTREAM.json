@@ -1,0 +1,12 @@
+{
+  "crate": "ncm-api-rs",
+  "version": "0.1.0",
+  "source": "https://github.com/jinzhongjia/ncm-api-rs",
+  "branch": "feat/sync-upstream-2026-10",
+  "commit": "5a5ced0f5feba6965f5cda718ebd6d73a9d3f26c",
+  "sha256": "2c9ba20fdb952fb6499b04b6e1961f47b472ca2f56c2c6b982b6db47ab964f4b",
+  "hashFormat": "git archive --format=tar <commit>",
+  "vendorPath": "native/media_core/vendor/ncm-api-rs",
+  "treeSha256": "a8e617a8757c009d83e59d390ee6b22e0ce4c53663614f0fac039a340ea8fe57",
+  "treeHashFormat": "sorted relative path + NUL + raw SHA256(file), concatenated then SHA256; exclude .git and target"
+}

@@ -1,0 +1,30 @@
+[package]
+name = "fideflow-media-ffi"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+
+[lib]
+# The shipped artifact is `libff_media_core.dylib`: the name matches the
+# `ff_media_core_*` symbols in schemas/media_core.h, and it is what
+# tooling/native/macos/rust.sh stages into Contents/Frameworks.
+name = "ff_media_core"
+# `rlib` exists so this crate's own tests and examples can call the C entry
+# points directly; only the `cdylib` is staged into the bundle.
+crate-type = ["cdylib", "staticlib", "rlib"]
+
+[dependencies]
+fideflow-ncm-host = { path = "../ncm-host" }
+fideflow-media-pipeline = { path = "../media-pipeline" }
+fideflow-media-session = { path = "../media-session" }
+# The ABI checks that a command is a JSON object before submitting it, so the
+# host gets `FF_MEDIA_ERR_MALFORMED_MESSAGE` instead of a schema rejection for
+# something that was never a control message.
+serde_json = "1"
+
+[[example]]
+# Drives the exported C ABI against a real file; see the runbook.
+name = "play_file"
+
+[lints]
+workspace = true

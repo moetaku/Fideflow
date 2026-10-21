@@ -1,0 +1,193 @@
+{
+  "manifestVersion": 1,
+  "platform": "macos",
+  "deploymentTarget": "12.0",
+  "architectures": [
+    "arm64",
+    "x86_64"
+  ],
+  "platforms": {
+    "linux": {
+      "deploymentTarget": "glibc-2.31",
+      "architectures": ["x86_64", "aarch64"],
+      "rustTargets": ["x86_64-unknown-linux-gnu", "aarch64-unknown-linux-gnu"],
+      "libraryName": "libff_media_core.so",
+      "outputBackend": "portaudio",
+      "toolchain": "gcc-or-clang",
+      "prefix": "native/build/third_party/linux",
+      "networkMode": "off"
+    },
+    "macos": {
+      "deploymentTarget": "12.0",
+      "architectures": [
+        "arm64",
+        "x86_64"
+      ],
+      "rustTargets": [
+        "aarch64-apple-darwin",
+        "x86_64-apple-darwin"
+      ],
+      "libraryName": "libff_media_core.dylib",
+      "outputBackend": "coreaudio",
+      "toolchain": "clang",
+      "prefix": "native/build/third_party/macos"
+    },
+    "windows": {
+      "deploymentTarget": "10.0.19041",
+      "architectures": [
+        "x86_64"
+      ],
+      "rustTargets": [
+        "x86_64-pc-windows-msvc"
+      ],
+      "libraryName": "ff_media_core.dll",
+      "outputBackend": "wasapi",
+      "toolchain": "msvc",
+      "prefix": "native/build/third_party/windows",
+      "sqlite": {
+        "version": "3.54.0",
+        "downloadName": "sqlite-dll-win-x64-3540000.zip",
+        "topDir": "sqlite-dll-win-x64-3540000",
+        "url": "https://www.sqlite.org/2026/sqlite-dll-win-x64-3540000.zip",
+        "sha256": "a548a9b5d8f695e669f71bcc4669fdc8b3e1eb79995761c81a9128262126f71c",
+        "license": "public-domain"
+      },
+      "networkMode": "off"
+    },
+    "android": {
+      "deploymentTarget": "24",
+      "architectures": [
+        "arm64-v8a",
+        "x86_64"
+      ],
+      "rustTargets": [
+        "aarch64-linux-android",
+        "x86_64-linux-android"
+      ],
+      "libraryName": "libff_media_core.so",
+      "outputBackend": "miniaudio",
+      "toolchain": "ndk-clang",
+      "prefix": "native/build/mobile/android",
+      "networkMode": "off",
+      "ndkVersion": "28.2.13676358"
+    },
+    "ios": {
+      "deploymentTarget": "13.0",
+      "architectures": [
+        "arm64",
+        "arm64-simulator"
+      ],
+      "rustTargets": [
+        "aarch64-apple-ios",
+        "aarch64-apple-ios-sim"
+      ],
+      "libraryName": "FFMediaCore.framework/FFMediaCore",
+      "outputBackend": "miniaudio",
+      "toolchain": "xcode-clang",
+      "prefix": "native/build/mobile/ios",
+      "networkMode": "off",
+      "simulatorDeploymentTarget": "14.0",
+      "appDeploymentTarget": "15.0"
+    }
+  },
+  "sizeBudgetBytesPerArchitecture": 41943040,
+  "defaultNetworkMode": "off",
+  "networkModes": {
+    "off": {
+      "description": "Native libraries stay offline; source bytes are supplied by the host transport through a custom AVIO.",
+      "protocols": [
+        "file",
+        "pipe"
+      ],
+      "tlsBackend": "none",
+      "caBundle": null,
+      "requiredSources": []
+    }
+  },
+  "tools": {},
+  "forbiddenConfigureFlags": [
+    "--enable-gpl",
+    "--enable-nonfree",
+    "--enable-version3",
+    "--enable-securetransport"
+  ],
+  "sources": {
+    "ffmpeg": {
+      "version": "7.1.5",
+      "archiveFormat": "tar.xz",
+      "topDir": "ffmpeg-7.1.5",
+      "downloadName": "ffmpeg-7.1.5.tar.xz",
+      "urls": [
+        "https://ffmpeg.org/releases/ffmpeg-7.1.5.tar.xz"
+      ],
+      "sha256": "de668509caf9e35e3cd162473441fdb29538c6d96ed080292b3cf9e6fc5d558f",
+      "license": "LGPL-2.1-or-later",
+      "licenseFiles": [
+        "COPYING.LGPLv2.1"
+      ],
+      "linkage": "dynamic"
+    },
+    "libsoxr": {
+      "version": "0.1.3",
+      "archiveFormat": "tar.gz",
+      "topDir": "soxr-0.1.3",
+      "downloadName": "soxr-0.1.3.tar.gz",
+      "urls": [
+        "https://github.com/chirlu/soxr/archive/refs/tags/0.1.3.tar.gz"
+      ],
+      "commit": "945b592b70470e29f917f4de89b4281fbbd540c0",
+      "sha256": "db6ca1b1e8405c6ef92f8294fc123d910abf0a114003b3f0f13fa57a95fd62d0",
+      "license": "LGPL-2.1-or-later",
+      "licenseFiles": [
+        "LICENCE"
+      ],
+      "linkage": "dynamic"
+    },
+    "portaudio": {
+      "version": "19.7.0",
+      "archiveFormat": "tar.gz",
+      "topDir": "portaudio",
+      "downloadName": "pa_stable_v190700_20210406.tgz",
+      "urls": [
+        "https://files.portaudio.com/archives/pa_stable_v190700_20210406.tgz"
+      ],
+      "sha256": "47efbf42c77c19a05d22e627d42873e991ec0c1357219c0d74ce6a2948cb2def",
+      "license": "MIT",
+      "licenseFiles": [
+        "LICENSE.txt"
+      ],
+      "linkage": "static"
+    },
+    "miniaudio": {
+      "version": "0.11.25",
+      "archiveFormat": "tar.gz",
+      "topDir": "miniaudio-0.11.25",
+      "downloadName": "miniaudio-0.11.25.tar.gz",
+      "urls": [
+        "https://github.com/mackron/miniaudio/archive/refs/tags/0.11.25.tar.gz"
+      ],
+      "sha256": "b900edcffe979816e2560a0580b9b1216d674b4f17fbadeca8f777a7f8ab0274",
+      "license": "MIT-0",
+      "licenseFiles": [
+        "LICENSE"
+      ],
+      "linkage": "static"
+    }
+  },
+  "linkedSdks": {
+    "ncmHost": {
+      "description": "Host compatibility library wrapping the unmodified vendored SDK; no server feature. See crates/ncm-api-compat/UPSTREAM.json.",
+      "crate": "ncm-api-rs",
+      "version": "0.1.0",
+      "features": [],
+      "pin": "vendored-sha256",
+      "source": "native/media_core/crates/ncm-api-compat",
+      "upstreamSha256": "2c9ba20fdb952fb6499b04b6e1961f47b472ca2f56c2c6b982b6db47ab964f4b",
+      "license": "WTFPL",
+      "licenseFile": "../../vendor/ncm-api-rs/LICENSE",
+      "tlsBackend": "rustls",
+      "upstreamCommit": "5a5ced0f5feba6965f5cda718ebd6d73a9d3f26c",
+      "upstreamBranch": "feat/sync-upstream-2026-10"
+    }
+  }
+}

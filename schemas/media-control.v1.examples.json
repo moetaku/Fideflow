@@ -1,0 +1,239 @@
+{
+  "command": {
+    "schemaVersion": 1,
+    "kind": "loadQueue",
+    "clientId": "flutter-main",
+    "commandId": "cmd-1",
+    "targetSessionId": "session-1",
+    "expectedQueueRevision": "0",
+    "payload": {
+      "items": [
+        {
+          "queueItemId": "item-1",
+          "trackId": "track-1",
+          "sourceUri": "file:///Users/example/Music/song.mp3"
+        }
+      ],
+      "startItemId": "item-1",
+      "autoplay": true,
+      "seed": "987654321"
+    }
+  },
+  "snapshot": {
+    "schemaVersion": 1,
+    "kind": "snapshot",
+    "sessionId": "session-1",
+    "sessionRevision": "1",
+    "queueRevision": "1",
+    "generation": "1",
+    "phase": "resolving",
+    "mode": "listLoop",
+    "playWhenReady": true,
+    "buffering": false,
+    "suppressionReasons": [],
+    "isActuallyPlaying": false,
+    "currentQueueItemId": "item-1",
+    "effectiveOrder": [
+      "item-1"
+    ],
+    "queueItems": [
+      {
+        "queueItemId": "item-1",
+        "trackId": "track-1"
+      }
+    ],
+    "positionMs": "0",
+    "durationMs": null,
+    "errorCode": null,
+    "volume": 800,
+    "shuffleSeed": null
+  },
+  "result": {
+    "schemaVersion": 1,
+    "kind": "result",
+    "commandId": "cmd-1",
+    "status": "accepted",
+    "sessionRevision": "1",
+    "operationId": "op-1"
+  },
+  "operation": {
+    "schemaVersion": 1,
+    "kind": "operation",
+    "operationId": "op-1",
+    "commandId": "cmd-1",
+    "status": "pending",
+    "generation": "1",
+    "targetQueueItemId": "item-1",
+    "errorCode": null
+  },
+  "sourceRequest": {
+    "schemaVersion": 1,
+    "kind": "sourceRequest",
+    "sessionId": "session-1",
+    "sessionRevision": "1",
+    "generation": "1",
+    "queueItemId": "item-1",
+    "trackId": "track-1",
+    "requestId": "sr-1-item-1",
+    "reason": "missing"
+  },
+  "commands": {
+    "setMode": {
+      "schemaVersion": 1,
+      "kind": "setMode",
+      "clientId": "flutter-main",
+      "commandId": "cmd-2",
+      "targetSessionId": "session-1",
+      "expectedQueueRevision": "1",
+      "payload": {
+        "mode": "shuffle",
+        "seed": "123456789"
+      }
+    },
+    "playItem": {
+      "schemaVersion": 1,
+      "kind": "playItem",
+      "clientId": "flutter-main",
+      "commandId": "cmd-3",
+      "targetSessionId": "session-1",
+      "expectedQueueRevision": "1",
+      "targetQueueItemId": "item-1",
+      "payload": {}
+    },
+    "setVolume": {
+      "schemaVersion": 1,
+      "kind": "setVolume",
+      "clientId": "flutter-main",
+      "commandId": "cmd-4",
+      "targetSessionId": "session-1",
+      "payload": {
+        "volume": 800
+      }
+    },
+    "editQueue": {
+      "schemaVersion": 1,
+      "kind": "editQueue",
+      "clientId": "flutter-main",
+      "commandId": "cmd-6",
+      "targetSessionId": "session-1",
+      "expectedQueueRevision": "1",
+      "payload": {
+        "operation": "playNext",
+        "items": [
+          {
+            "queueItemId": "item-2",
+            "trackId": "track-2"
+          }
+        ]
+      }
+    },
+    "provideSource": {
+      "schemaVersion": 1,
+      "kind": "provideSource",
+      "clientId": "flutter-main",
+      "commandId": "cmd-5",
+      "targetSessionId": "session-1",
+      "targetQueueItemId": "item-1",
+      "expectedGeneration": "1",
+      "payload": {
+        "sourceUri": "https://music.example.invalid/stream.flac",
+        "expiresAtMs": "1790273151000",
+        "requestId": "sr-1-item-1"
+      }
+    },
+    "intelligence": {
+      "schemaVersion": 1,
+      "kind": "intelligence",
+      "clientId": "flutter-main",
+      "commandId": "intelligence-start",
+      "targetSessionId": "session-1",
+      "expectedQueueRevision": "0",
+      "payload": {
+        "operation": "start",
+        "sessionId": "heart-example",
+        "items": [
+          {
+            "queueItemId": "item-1",
+            "trackId": "track-1",
+            "sourceUri": "file:///Users/example/Music/song.mp3"
+          }
+        ],
+        "autoplay": true
+      }
+    },
+    "sourceFailed": {
+      "schemaVersion": 1,
+      "kind": "sourceFailed",
+      "clientId": "flutter-main",
+      "commandId": "host-source-failed",
+      "targetSessionId": "session-1",
+      "payload": {
+        "errorCode": "sourceOpenFailed"
+      },
+      "targetQueueItemId": "item-1",
+      "expectedGeneration": "1"
+    },
+    "refreshOutputDevices": {
+      "schemaVersion": 1,
+      "kind": "refreshOutputDevices",
+      "clientId": "flutter-main",
+      "commandId": "refreshOutputDevices-example",
+      "targetSessionId": "session-1",
+      "payload": {}
+    },
+    "setOutputConfiguration": {
+      "schemaVersion": 1,
+      "kind": "setOutputConfiguration",
+      "clientId": "flutter-main",
+      "commandId": "setOutputConfiguration-example",
+      "targetSessionId": "session-1",
+      "payload": {
+        "deviceUid": null,
+        "exclusive": true
+      }
+    },
+    "setPlaybackEffects": {
+      "schemaVersion": 1,
+      "kind": "setPlaybackEffects",
+      "clientId": "flutter-main",
+      "commandId": "effects-1",
+      "targetSessionId": "session-1",
+      "payload": {
+        "fadeEnabled": true,
+        "volumeNormalizationEnabled": true
+      }
+    },
+    "setInterruption": {
+      "schemaVersion": 1,
+      "kind": "setInterruption",
+      "clientId": "macos-lifecycle",
+      "commandId": "sleep-1",
+      "targetSessionId": "session-1",
+      "payload": {
+        "interruptionId": "sleep-cycle-1",
+        "active": true
+      }
+    },
+    "setTransientGain": {
+      "schemaVersion": 1,
+      "kind": "setTransientGain",
+      "clientId": "flutter-main",
+      "commandId": "duck-1",
+      "targetSessionId": "session-1",
+      "payload": {
+        "volume": 200
+      }
+    }
+  },
+  "outputSampleRates": {
+    "schemaVersion": 1,
+    "kind": "outputSampleRates",
+    "event": "devicesRefreshed",
+    "systemRateHz": 48000,
+    "sourceRateHz": 44100,
+    "pcmRateHz": 96000,
+    "targetRateHz": 96000,
+    "resamplingEnabled": true,
+    "exclusive": false
+  }
+}

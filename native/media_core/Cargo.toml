@@ -1,0 +1,22 @@
+[workspace]
+resolver = "3"
+members = [
+  "crates/media-session",
+  "crates/media-output",
+  "crates/media-pipeline",
+  "crates/media-ffi",
+  "crates/ncm-host",
+  "crates/ncm-api-compat",
+]
+
+exclude = ["vendor/ncm-api-rs"]
+
+[workspace.package]
+version = "0.1.0"
+edition = "2024"
+license = "MIT"
+
+[workspace.lints.clippy]
+all = "warn"
+pedantic = "warn"
+

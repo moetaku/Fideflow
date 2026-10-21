@@ -1,0 +1,18 @@
+[package]
+name = "fideflow-media-session"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+
+[lib]
+name = "fideflow_media_session"
+
+[dependencies]
+# The control plane speaks the JSON wire format docs/design/boundaries.md fixes; the schema is the
+# single source of truth for its shape.
+serde_json = "1"
+fideflow-media-pipeline = { path = "../media-pipeline" }
+fideflow-media-output = { path = "../media-output" }
+
+[lints]
+workspace = true

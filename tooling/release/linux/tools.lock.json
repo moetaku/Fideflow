@@ -1,0 +1,47 @@
+{
+  "manifestVersion": 1,
+  "appimagetool": {
+    "version": "1.9.1",
+    "commit": "8c8c91f762b412a19f4e8d2c4b35afb98f2d7c81",
+    "assets": {
+      "x86_64": {
+        "name": "appimagetool-x86_64.AppImage",
+        "sha256": "ed4ce84f0d9caff66f50bcca6ff6f35aae54ce8135408b3fa33abfc3cb384eb0",
+        "urls": [
+          "https://api.github.com/repos/AppImage/appimagetool/releases/assets/324406736",
+          "https://github.com/AppImage/appimagetool/releases/download/1.9.1/appimagetool-x86_64.AppImage"
+        ]
+      },
+      "aarch64": {
+        "name": "appimagetool-aarch64.AppImage",
+        "sha256": "f0837e7448a0c1e4e650a93bb3e85802546e60654ef287576f46c71c126a9158",
+        "urls": [
+          "https://api.github.com/repos/AppImage/appimagetool/releases/assets/324406707",
+          "https://github.com/AppImage/appimagetool/releases/download/1.9.1/appimagetool-aarch64.AppImage"
+        ]
+      }
+    }
+  },
+  "runtime": {
+    "version": "continuous",
+    "commit": "fedfad51acc2860b2916a1eef32ba4a500ff31ef",
+    "assets": {
+      "x86_64": {
+        "name": "runtime-x86_64",
+        "sha256": "617aa77314d57c8b8e4fae9c3f0b35af7b30d5529cb69e98f64f92510ed98a46",
+        "urls": [
+          "https://api.github.com/repos/AppImage/type2-runtime/releases/assets/657374641",
+          "https://github.com/AppImage/type2-runtime/releases/download/continuous/runtime-x86_64"
+        ]
+      },
+      "aarch64": {
+        "name": "runtime-aarch64",
+        "sha256": "9a72a744d221576c9347ec074243acc5c3c7568896b12714e0e82e9f0bf47900",
+        "urls": [
+          "https://api.github.com/repos/AppImage/type2-runtime/releases/assets/657373827",
+          "https://github.com/AppImage/type2-runtime/releases/download/continuous/runtime-aarch64"
+        ]
+      }
+    }
+  }
+}

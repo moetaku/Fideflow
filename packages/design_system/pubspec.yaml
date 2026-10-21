@@ -1,0 +1,19 @@
+name: fideflow_design_system
+description: Theme tokens and shared UI primitives for Fideflow.
+version: 0.1.0
+publish_to: none
+resolution: workspace
+
+environment:
+  sdk: ^3.12.2
+
+dependencies:
+  fideflow_domain: ^0.1.0
+  flutter:
+    sdk: flutter
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+

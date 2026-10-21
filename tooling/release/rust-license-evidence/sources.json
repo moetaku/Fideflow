@@ -1,0 +1,46 @@
+{
+  "jni-0.22.4": {
+    "repository": "https://github.com/jni-rs/jni-rs",
+    "commit": "5ae9458a4ec44c5318f37ddc7569c1d4ae8a69e7",
+    "selectedLicense": "MIT",
+    "files": {
+      "LICENSE-MIT": {
+        "url": "https://raw.githubusercontent.com/jni-rs/jni-rs/5ae9458a4ec44c5318f37ddc7569c1d4ae8a69e7/LICENSE-MIT",
+        "sha256": "fea1d5bf3dd71605ce5d7d2ff695c1837e914c77195e523a86b5391716477960"
+      }
+    }
+  },
+  "jni-macros-0.22.4": {
+    "repository": "https://github.com/jni-rs/jni-rs",
+    "commit": "33045a124105c939d1e2cbdcb5a39e5d868ffa03",
+    "selectedLicense": "MIT",
+    "files": {
+      "LICENSE-MIT": {
+        "url": "https://raw.githubusercontent.com/jni-rs/jni-rs/33045a124105c939d1e2cbdcb5a39e5d868ffa03/LICENSE-MIT",
+        "sha256": "fea1d5bf3dd71605ce5d7d2ff695c1837e914c77195e523a86b5391716477960"
+      }
+    }
+  },
+  "jni-sys-macros-0.4.1": {
+    "repository": "https://github.com/jni-rs/jni-sys",
+    "commit": "64d77b7a5f119d7b55b4e2c169a4668067ff59e6",
+    "selectedLicense": "MIT",
+    "files": {
+      "LICENSE-MIT": {
+        "url": "https://raw.githubusercontent.com/jni-rs/jni-sys/64d77b7a5f119d7b55b4e2c169a4668067ff59e6/LICENSE-MIT",
+        "sha256": "1d85bd754b04ceec93e98e890edd1fa3c6a22e81bcb32135806beeccefa51cd1"
+      }
+    }
+  },
+  "rustls-platform-verifier-android-0.2.0": {
+    "repository": "https://github.com/rustls/rustls-platform-verifier",
+    "commit": "252e25161a91af476cbea620e29d277592d27ec7",
+    "selectedLicense": "MIT",
+    "files": {
+      "LICENSE-MIT": {
+        "url": "https://raw.githubusercontent.com/rustls/rustls-platform-verifier/252e25161a91af476cbea620e29d277592d27ec7/LICENSE-MIT",
+        "sha256": "1c7cf76689c837a68ed8d704994e52a0f2940c087958f860d17f3186afbdcc0c"
+      }
+    }
+  }
+}

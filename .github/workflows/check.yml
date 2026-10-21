@@ -1,0 +1,55 @@
+name: 检查
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+  workflow_call:
+permissions:
+  contents: read
+concurrency:
+  group: check-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  dart:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: subosito/flutter-action@v2
+        with:
+          flutter-version: '3.47.5'
+          channel: stable
+      - run: flutter pub get --enforce-lockfile
+      - run: dart format --output=none --set-exit-if-changed apps packages
+      - run: dart analyze --fatal-infos .
+      - name: 架构与契约
+        run: |
+          python3 tooling/native/checks/test_linux_dependencies.py
+          python3 tooling/native/checks/test_mobile_build.py
+          python3 tooling/release/test_github_assets.py
+          python3 tooling/release/test_licenses.py
+          python3 tooling/release/windows/test_verify.py
+          python3 tooling/check_contracts.py
+          python3 tooling/check_architecture.py
+          python3 tooling/check_presentation_boundaries.py
+          python3 tooling/test_presentation_boundaries.py
+          python3 tooling/generate_ui_references.py --check
+      - name: Flutter 测试
+        working-directory: apps/fideflow_flutter
+        run: flutter test --no-pub
+      - name: Dart 包测试
+        run: |
+          for package in application domain local_data media_host media_sdk ncm_gateway; do
+            (cd "packages/$package" && dart test)
+          done
+  rust-format:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - run: rustup component add rustfmt
+      - run: cargo fmt --all --manifest-path native/media_core/Cargo.toml --check

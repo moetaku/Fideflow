@@ -1,0 +1,90 @@
+name: 全平台打包与发布
+on:
+  push:
+    tags: ['v*']
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: release-${{ github.ref }}
+  cancel-in-progress: false
+jobs:
+  validate:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    outputs:
+      version: ${{ steps.version.outputs.version }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - id: version
+        name: 校验发布标签
+        shell: bash
+        run: |
+          set -euo pipefail
+          test "$GITHUB_REF_TYPE" = tag || { echo '手动发布也必须选择已存在的版本标签'; exit 1; }
+          version=$(sed -n 's/^version:[[:space:]]*//p' apps/fideflow_flutter/pubspec.yaml | tr -d '\r')
+          [[ "$version" =~ ^[0-9]+\.[0-9]+\.[0-9]+\+[0-9]+$ ]]
+          test "$GITHUB_REF_NAME" = "v${version%%+*}"
+          echo "version=$version" >> "$GITHUB_OUTPUT"
+      - run: |
+          python3 tooling/native/manifest.py check
+          python3 tooling/check_contracts.py
+          python3 tooling/release/test_licenses.py
+          python3 tooling/release/windows/test_verify.py
+          python3 tooling/release/test_github_assets.py
+  quality:
+    needs: validate
+    uses: ./.github/workflows/check.yml
+  android:
+    needs: [validate, quality]
+    uses: ./.github/workflows/android-linux-release.yml
+    secrets: inherit
+  macos:
+    needs: [validate, quality]
+    uses: ./.github/workflows/macos-release.yml
+  ios:
+    needs: [validate, quality]
+    uses: ./.github/workflows/ios-release.yml
+  linux:
+    needs: [validate, quality]
+    uses: ./.github/workflows/linux-release.yml
+  windows:
+    needs: [validate, quality]
+    uses: ./.github/workflows/windows-release.yml
+  publish:
+    needs: [validate, quality, android, macos, ios, linux, windows]
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: Fideflow-*
+          path: release-assets
+          merge-multiple: true
+      - name: 验证所有平台产物
+        run: python3 tooling/release/github_assets.py --verify --output release-assets --revision "$GITHUB_SHA"
+      - name: 汇总源码与发布附件
+        env:
+          VERSION: ${{ needs.validate.outputs.version }}
+        run: python3 tooling/release/github_assets.py --publish --source release-assets --output publish-assets --revision "$GITHUB_SHA" --version "$VERSION"
+      - name: 上传并发布统一 Release
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          if gh release view "$GITHUB_REF_NAME" --json isDraft > "$RUNNER_TEMP/release.json"; then
+            python3 -c 'import json,sys; assert json.load(open(sys.argv[1]))["isDraft"], "Release 已公开；请使用新的版本标签"' "$RUNNER_TEMP/release.json"
+          else
+            gh release create "$GITHUB_REF_NAME" --verify-tag --draft --title "Fideflow $GITHUB_REF_NAME" --notes-file .github/RELEASE_NOTES.md
+          fi
+          gh release upload "$GITHUB_REF_NAME" publish-assets/* --clobber
+          gh release edit "$GITHUB_REF_NAME" --draft=false

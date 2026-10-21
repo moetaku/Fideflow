@@ -1,0 +1,28 @@
+# FFmpeg component allowlist (docs/design/native-build.md).
+#
+# Every name below is checked against `configure --list-<kind>` before FFmpeg is
+# configured, so a typo or a component that moved in a newer FFmpeg fails the
+# build instead of silently shipping a decoder-less library.
+#
+# Supported families and containers:
+#   MP3               -> demuxer mp3 (ID3v2 tags are parsed inside it; FFmpeg
+#                        7.1.5 has no separate id3v2 demuxer component),
+#                        decoders mp3/mp3float, parser mpegaudio
+#   AAC (M4A/ADTS)    -> demuxers mov/aac, decoders aac/aac_fixed, parser aac
+#   FLAC              -> demuxers flac/ogg, decoder flac, parser flac
+#   ALAC              -> demuxer mov, decoder alac
+#   Vorbis (Ogg)      -> demuxer ogg, decoder vorbis, parser vorbis
+#   Opus (Ogg/WebM)   -> demuxers ogg/matroska, decoder opus, parser opus
+#   PCM (WAV)         -> demuxer wav, pcm_* decoders
+#   Containers        -> wav, mp3, flac, mov (mp4/m4a), ogg, matroska (webm)
+#
+# Video decoding, all encoders/muxers, filters, devices and the command line
+# programs are intentionally absent; `--disable-everything` plus this list is the
+# complete playback surface.
+
+demuxer: aac flac matroska mov mp3 ogg wav
+decoder: aac aac_fixed alac flac mp3 mp3float opus pcm_f32le pcm_f64le pcm_s16be pcm_s16le pcm_s24be pcm_s24le pcm_s32le pcm_u8 vorbis
+parser: aac flac mpegaudio opus vorbis
+
+# Only local protocols; remote bytes arrive through host-owned custom AVIO.
+protocol-base: file pipe

@@ -1,0 +1,1309 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://fideflow.local/schemas/media-control.v1.schema.json",
+  "title": "Fideflow media control v1",
+  "description": "UTF-8 JSON control messages. Every 64-bit counter is a decimal string; time is milliseconds.",
+  "$defs": {
+    "uint64": {
+      "type": "string",
+      "pattern": "^(0|[1-9][0-9]*)$",
+      "maxLength": 20
+    },
+    "epochMs": {
+      "description": "An absolute instant, as epoch milliseconds in a decimal string. Used for source expiries, where `null` (or an absent field) means the caller does not know when the source stops being usable: a `file:` source never expires, and a provider that did not say must not be guessed at. A source is a short-lived object, so the session refuses to start one that is already past its expiry and asks for a fresh one instead (docs/design/provider.md).",
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^(0|[1-9][0-9]*)$",
+      "maxLength": 20
+    },
+    "id": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 128
+    },
+    "playbackMode": {
+      "description": "How the queue advances. `listLoop` wraps around, `repeatOne` repeats the current item on natural end, `shuffle` walks a seeded permutation while the current item stays put. Explicit codes: never send a language enum index. sequential advances without wrapping; heart streams only permit sequential and repeatOne.",
+      "enum": [
+        "listLoop",
+        "repeatOne",
+        "shuffle",
+        "sequential"
+      ]
+    },
+    "command": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "schemaVersion",
+        "kind",
+        "clientId",
+        "commandId",
+        "targetSessionId",
+        "payload"
+      ],
+      "properties": {
+        "schemaVersion": {
+          "const": 1
+        },
+        "kind": {
+          "enum": [
+            "loadQueue",
+            "intelligence",
+            "play",
+            "pause",
+            "seek",
+            "skipNext",
+            "skipPrevious",
+            "playItem",
+            "setMode",
+            "setQuality",
+            "editQueue",
+            "stop",
+            "clearQueue",
+            "setVolume",
+            "setPlaybackEffects",
+            "refreshOutputDevices",
+            "setOutputConfiguration",
+            "provideSource",
+            "sourceFailed",
+            "setInterruption",
+            "setTransientGain"
+          ]
+        },
+        "clientId": {
+          "$ref": "#/$defs/id"
+        },
+        "commandId": {
+          "$ref": "#/$defs/id"
+        },
+        "targetSessionId": {
+          "$ref": "#/$defs/id"
+        },
+        "expectedQueueRevision": {
+          "$ref": "#/$defs/uint64"
+        },
+        "targetQueueItemId": {
+          "$ref": "#/$defs/id"
+        },
+        "expectedGeneration": {
+          "$ref": "#/$defs/uint64"
+        },
+        "payload": {
+          "type": "object"
+        }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "kind": {
+                "const": "loadQueue"
+              }
+            }
+          },
+          "then": {
+            "required": [
+              "expectedQueueRevision"
+            ],
+            "properties": {
+              "payload": {
+                "$ref": "#/$defs/loadQueuePayload"
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "kind": {
+                "const": "editQueue"
+              }
+            }
+          },
+          "then": {
+            "required": [
+              "expectedQueueRevision"
+            ],
+            "properties": {
+              "payload": {
+                "$ref": "#/$defs/editQueuePayload"
+              }
+            },
+            "allOf": [
+              {
+                "if": {
+                  "properties": {
+                    "payload": {
+                      "properties": {
+                        "operation": {
+                          "const": "remove"
+                        }
+                      }
+                    }
+                  }
+                },
+                "then": {
+                  "required": [
+                    "targetQueueItemId"
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "kind": {
+                "const": "seek"
+              }
+            }
+          },
+          "then": {
+            "required": [
+              "targetQueueItemId",
+              "expectedGeneration"
+            ],
+            "properties": {
+              "payload": {
+                "$ref": "#/$defs/seekPayload"
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "kind": {
+                "enum": [
+                  "skipNext",
+                  "skipPrevious"
+                ]
+              }
+            }
+          },
+          "then": {
+            "required": [
+              "expectedQueueRevision",
+              "targetQueueItemId",
+              "expectedGeneration"
+            ],
+            "properties": {
+              "payload": {
+                "$ref": "#/$defs/emptyPayload"
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "kind": {
+                "const": "playItem"
+              }
+            }
+          },
+          "then": {
+            "required": [
+              "expectedQueueRevision",
+              "targetQueueItemId"
+            ],
+            "properties": {
+              "payload": {
+                "$ref": "#/$defs/emptyPayload"
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "kind": {
+                "const": "setMode"
+              }
+            }
+          },
+          "then": {
+            "required": [
+              "expectedQueueRevision"
+            ],
+            "properties": {
+              "payload": {
+                "$ref": "#/$defs/setModePayload"
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "kind": {
+                "const": "setVolume"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "payload": {
+                "$ref": "#/$defs/setVolumePayload"
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "kind": {
+                "enum": [
+                  "play",
+                  "pause",
+                  "clearQueue"
+                ]
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "payload": {
+                "$ref": "#/$defs/emptyPayload"
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "kind": {
+                "const": "provideSource"
+              }
+            }
+          },
+          "then": {
+            "required": [
+              "targetQueueItemId"
+            ],
+            "properties": {
+              "payload": {
+                "$ref": "#/$defs/provideSourcePayload"
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "kind": {
+                "const": "intelligence"
+              }
+            }
+          },
+          "then": {
+            "required": [
+              "expectedQueueRevision"
+            ],
+            "properties": {
+              "payload": {
+                "$ref": "#/$defs/intelligencePayload"
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "kind": {
+                "const": "sourceFailed"
+              }
+            }
+          },
+          "then": {
+            "required": [
+              "targetQueueItemId",
+              "expectedGeneration"
+            ],
+            "properties": {
+              "payload": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "errorCode"
+                ],
+                "properties": {
+                  "errorCode": {
+                    "$ref": "#/$defs/id"
+                  }
+                }
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "kind": {
+                "const": "stop"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "payload": {
+                "$ref": "#/$defs/stopPayload"
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "kind": {
+                "const": "refreshOutputDevices"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "payload": {
+                "$ref": "#/$defs/emptyPayload"
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "kind": {
+                "const": "setOutputConfiguration"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "payload": {
+                "$ref": "#/$defs/outputConfigurationPayload"
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "kind": {
+                "const": "setPlaybackEffects"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "payload": {
+                "$ref": "#/$defs/playbackEffectsPayload"
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "kind": {
+                "const": "setInterruption"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "payload": {
+                "$ref": "#/$defs/interruptionPayload"
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "kind": {
+                "const": "setTransientGain"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "payload": {
+                "$ref": "#/$defs/setVolumePayload"
+              }
+            }
+          }
+        }
+      ]
+    },
+    "snapshot": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "schemaVersion",
+        "kind",
+        "sessionId",
+        "sessionRevision",
+        "queueRevision",
+        "generation",
+        "phase",
+        "mode",
+        "playWhenReady",
+        "buffering",
+        "suppressionReasons",
+        "isActuallyPlaying",
+        "currentQueueItemId",
+        "effectiveOrder",
+        "positionMs",
+        "volume",
+        "shuffleSeed",
+        "queueItems"
+      ],
+      "properties": {
+        "schemaVersion": {
+          "const": 1
+        },
+        "kind": {
+          "const": "snapshot"
+        },
+        "sessionId": {
+          "$ref": "#/$defs/id"
+        },
+        "sessionRevision": {
+          "$ref": "#/$defs/uint64"
+        },
+        "queueRevision": {
+          "$ref": "#/$defs/uint64"
+        },
+        "generation": {
+          "$ref": "#/$defs/uint64"
+        },
+        "phase": {
+          "enum": [
+            "idle",
+            "paused",
+            "resolving",
+            "loading",
+            "ready",
+            "ended",
+            "error"
+          ]
+        },
+        "playWhenReady": {
+          "type": "boolean"
+        },
+        "isSeeking": {
+          "type": "boolean"
+        },
+        "buffering": {
+          "type": "boolean"
+        },
+        "suppressionReasons": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "enum": [
+              "audioFocus",
+              "interruption",
+              "deviceUnavailable"
+            ]
+          }
+        },
+        "isActuallyPlaying": {
+          "type": "boolean"
+        },
+        "currentQueueItemId": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "mode": {
+          "$ref": "#/$defs/playbackMode"
+        },
+        "effectiveOrder": {
+          "description": "Every queued item in the order it will play, as `queueItemId`s. A client renders the queue from this list instead of deriving the order from the mode, which keeps the session the single owner of shuffle. Null when the queue is empty.",
+          "type": [
+            "array",
+            "null"
+          ],
+          "uniqueItems": true,
+          "items": {
+            "$ref": "#/$defs/id"
+          }
+        },
+        "queueItems": {
+          "description": "Every queued item's identity, in the queue's own load order. `effectiveOrder` says how those identities play; this says which track each one is, which is what lets a session-side restore (or a subscriber that attached later) render a queue it never loaded. Null when the queue is empty. A source is never published here (docs/design/restore.md).",
+          "type": [
+            "array",
+            "null"
+          ],
+          "uniqueItems": true,
+          "items": {
+            "$ref": "#/$defs/queueIdentity"
+          }
+        },
+        "positionMs": {
+          "$ref": "#/$defs/uint64"
+        },
+        "volume": {
+          "description": "Output gain as a permille of full scale: 0 is silent, 1000 is full. A plain integer rather than a float, so every serialization agrees on the value; the session is the single owner and the callback applies it lock-free.",
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 1000
+        },
+        "shuffleSeed": {
+          "description": "The seed of the shuffle order in effect, or null when the mode holds no seeded order. The session derives one when a caller did not pin it, so publishing it is what lets a client persist the order it heard and restore exactly that order rather than rolling a new permutation (docs/design/playback.md).",
+          "anyOf": [
+            {
+              "$ref": "#/$defs/uint64"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "durationMs": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/uint64"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "errorCode": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "intelligenceSessionId": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/id"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "description": "Runtime heart-stream identity. Null or absent means an ordinary static queue."
+        },
+        "outputSettings": {
+          "$ref": "#/$defs/outputSettings"
+        },
+        "playbackEffects": {
+          "$ref": "#/$defs/playbackEffects"
+        },
+        "failureKind": {
+          "type": "string",
+          "enum": [
+            "source",
+            "decode",
+            "output",
+            "other"
+          ]
+        }
+      }
+    },
+    "result": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "schemaVersion",
+        "kind",
+        "commandId",
+        "status"
+      ],
+      "properties": {
+        "schemaVersion": {
+          "const": 1
+        },
+        "kind": {
+          "const": "result"
+        },
+        "commandId": {
+          "$ref": "#/$defs/id"
+        },
+        "status": {
+          "enum": [
+            "accepted",
+            "rejected"
+          ]
+        },
+        "sessionRevision": {
+          "$ref": "#/$defs/uint64"
+        },
+        "operationId": {
+          "$ref": "#/$defs/id"
+        },
+        "errorCode": {
+          "type": "string"
+        },
+        "currentQueueRevision": {
+          "$ref": "#/$defs/uint64"
+        }
+      }
+    },
+    "operation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "schemaVersion",
+        "kind",
+        "operationId",
+        "commandId",
+        "status",
+        "generation"
+      ],
+      "properties": {
+        "schemaVersion": {
+          "const": 1
+        },
+        "kind": {
+          "const": "operation"
+        },
+        "operationId": {
+          "$ref": "#/$defs/id"
+        },
+        "commandId": {
+          "$ref": "#/$defs/id"
+        },
+        "status": {
+          "enum": [
+            "pending",
+            "succeeded",
+            "failed",
+            "cancelled",
+            "unknown"
+          ]
+        },
+        "generation": {
+          "$ref": "#/$defs/uint64"
+        },
+        "targetQueueItemId": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "errorCode": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      }
+    },
+    "queueItem": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "queueItemId",
+        "trackId"
+      ],
+      "properties": {
+        "queueItemId": {
+          "$ref": "#/$defs/id"
+        },
+        "trackId": {
+          "$ref": "#/$defs/id"
+        },
+        "sourceUri": {
+          "description": "Generic source for this item, supplied by the caller. Accepted schemes: file: (local playback) and ffinput://<nonzero-decimal-id> (player-scoped host byte input). Memory only: never persisted, never logged, never shown in UI state.",
+          "type": "string",
+          "maxLength": 2048,
+          "pattern": "^[a-z][a-z0-9+.-]*:.*$"
+        },
+        "expiresAtMs": {
+          "description": "When `sourceUri` stops being usable, when the caller knew. A load may carry it for the item it resolves upfront, exactly as `provideSource` does for a later one.",
+          "$ref": "#/$defs/epochMs"
+        },
+        "normalizationGainDb": {
+          "type": "number",
+          "description": "Effective normalization gain in dB (NCM gain minus closedGain); optional."
+        },
+        "normalizationPeak": {
+          "type": "number",
+          "exclusiveMinimum": 0,
+          "description": "Positive provider sample peak; omitted when unknown."
+        }
+      }
+    },
+    "queueIdentity": {
+      "description": "One queued item's identity, without a source. A client that did not load the queue (a restore, or a re-attached subscriber) labels and re-resolves from these; sources are deliberately absent, because they are short-lived and belong to the account that authorized them (docs/design/provider.md, docs/design/restore.md).",
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "queueItemId",
+        "trackId"
+      ],
+      "properties": {
+        "queueItemId": {
+          "$ref": "#/$defs/id"
+        },
+        "trackId": {
+          "$ref": "#/$defs/id"
+        }
+      }
+    },
+    "loadQueuePayload": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "items",
+        "startItemId",
+        "autoplay"
+      ],
+      "properties": {
+        "items": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "$ref": "#/$defs/queueItem"
+          }
+        },
+        "startItemId": {
+          "$ref": "#/$defs/id"
+        },
+        "autoplay": {
+          "type": "boolean"
+        },
+        "seed": {
+          "description": "Optional shuffle seed. When it is present and the mode is shuffle, the session builds the whole permutation from it and starts on that permutation's head, so the same seed yields the same order and the same first track and a restore replays both. `startItemId` is then not consulted, though it must still name one of `items`. Omit the seed to start on a named item, which is what picking a row does.",
+          "$ref": "#/$defs/uint64"
+        }
+      }
+    },
+    "editQueuePayload": {
+      "description": "A structural change to the queue that keeps the item that is playing in place unless it is the entry being removed. `playNext` inserts `items` immediately after the current item, `append` adds them at the end, and `remove` drops the entry the envelope's `targetQueueItemId` names. A remove addresses identity, not position, so the same track can appear more than once and still be removed one entry at a time.",
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "operation"
+      ],
+      "properties": {
+        "operation": {
+          "enum": [
+            "playNext",
+            "append",
+            "remove"
+          ]
+        },
+        "items": {
+          "description": "New queue entries for `playNext` and `append`. Each carries its own `queueItemId`, exactly as a `loadQueue` does, so a track already in the queue can be added again as a distinct entry.",
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "$ref": "#/$defs/queueItem"
+          }
+        },
+        "exitIntelligence": {
+          "type": "boolean",
+          "description": "Explicit user-confirmed external insertion exits the heart stream atomically on acceptance."
+        }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "operation": {
+                "enum": [
+                  "playNext",
+                  "append"
+                ]
+              }
+            }
+          },
+          "then": {
+            "required": [
+              "items"
+            ]
+          }
+        }
+      ]
+    },
+    "setModePayload": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "mode"
+      ],
+      "properties": {
+        "mode": {
+          "$ref": "#/$defs/playbackMode"
+        },
+        "seed": {
+          "description": "Optional shuffle seed. Deterministic callers (tests, a restored session) pin it; the session derives one when it is absent.",
+          "$ref": "#/$defs/uint64"
+        }
+      }
+    },
+    "seekPayload": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "positionMs"
+      ],
+      "properties": {
+        "positionMs": {
+          "$ref": "#/$defs/uint64"
+        }
+      }
+    },
+    "setVolumePayload": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "volume"
+      ],
+      "properties": {
+        "volume": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 1000
+        }
+      }
+    },
+    "provideSourcePayload": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "sourceUri"
+      ],
+      "properties": {
+        "sourceUri": {
+          "description": "Generic source for this item. Memory only. Null revokes the cached source without changing playback.",
+          "type": [
+            "string",
+            "null"
+          ],
+          "maxLength": 2048,
+          "pattern": "^[a-z][a-z0-9+.-]*:.*$"
+        },
+        "expiresAtMs": {
+          "$ref": "#/$defs/epochMs"
+        },
+        "requestId": {
+          "$ref": "#/$defs/id"
+        },
+        "normalizationGainDb": {
+          "type": "number",
+          "description": "Effective normalization gain in dB (NCM gain minus closedGain); optional."
+        },
+        "normalizationPeak": {
+          "type": "number",
+          "exclusiveMinimum": 0,
+          "description": "Positive provider sample peak; omitted when unknown."
+        }
+      }
+    },
+    "sourceRequest": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "schemaVersion",
+        "kind",
+        "sessionId",
+        "sessionRevision",
+        "generation",
+        "queueItemId",
+        "trackId",
+        "requestId"
+      ],
+      "properties": {
+        "schemaVersion": {
+          "const": 1
+        },
+        "kind": {
+          "const": "sourceRequest"
+        },
+        "sessionId": {
+          "$ref": "#/$defs/id"
+        },
+        "sessionRevision": {
+          "$ref": "#/$defs/uint64"
+        },
+        "generation": {
+          "$ref": "#/$defs/uint64"
+        },
+        "queueItemId": {
+          "$ref": "#/$defs/id"
+        },
+        "trackId": {
+          "$ref": "#/$defs/id"
+        },
+        "requestId": {
+          "$ref": "#/$defs/id"
+        },
+        "reason": {
+          "description": "Why this item has no usable source, when the session knows. `missing`: it never had one. `expired`: the source it held is past its expiry, so it was revoked rather than started. `retry`: the source it held was tried and failed, so it was revoked rather than read a second time. Absent on a library older than this field.",
+          "enum": [
+            "missing",
+            "expired",
+            "retry"
+          ]
+        }
+      }
+    },
+    "emptyPayload": {
+      "type": "object",
+      "maxProperties": 0
+    },
+    "intelligencePayload": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "operation",
+        "sessionId"
+      ],
+      "properties": {
+        "operation": {
+          "enum": [
+            "start",
+            "refill",
+            "exit"
+          ]
+        },
+        "sessionId": {
+          "$ref": "#/$defs/id"
+        },
+        "items": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 50,
+          "items": {
+            "$ref": "#/$defs/queueItem"
+          }
+        },
+        "evictCount": {
+          "$ref": "#/$defs/uint64"
+        },
+        "expectedSessionRevision": {
+          "$ref": "#/$defs/uint64"
+        },
+        "advance": {
+          "type": "boolean"
+        },
+        "autoplay": {
+          "type": "boolean"
+        }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "operation": {
+                "enum": [
+                  "start",
+                  "refill"
+                ]
+              }
+            }
+          },
+          "then": {
+            "required": [
+              "items",
+              "autoplay"
+            ]
+          }
+        }
+      ]
+    },
+    "stopPayload": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "permissionExpired": {
+          "type": "boolean"
+        },
+        "offlineGap": {
+          "type": "boolean"
+        }
+      }
+    },
+    "outputConfigurationPayload": {
+      "type": "object",
+      "required": [
+        "exclusive"
+      ],
+      "properties": {
+        "deviceUid": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "minLength": 1,
+          "maxLength": 1023
+        },
+        "exclusive": {
+          "type": "boolean"
+        },
+        "resamplingEnabled": {
+          "type": "boolean",
+          "default": false
+        },
+        "targetSampleRate": {
+          "type": "integer",
+          "enum": [
+            44100,
+            48000,
+            88200,
+            96000,
+            176400,
+            192000
+          ],
+          "default": 48000
+        }
+      },
+      "additionalProperties": false
+    },
+    "outputSettings": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "supported",
+        "deviceUid",
+        "exclusive",
+        "exclusiveActive",
+        "activeDeviceUid",
+        "busy",
+        "errorCode",
+        "refreshPending",
+        "devices"
+      ],
+      "properties": {
+        "supported": {
+          "type": "boolean"
+        },
+        "deviceUid": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "exclusive": {
+          "type": "boolean"
+        },
+        "exclusiveActive": {
+          "type": "boolean"
+        },
+        "activeDeviceUid": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "busy": {
+          "type": "boolean"
+        },
+        "errorCode": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "refreshPending": {
+          "type": "boolean"
+        },
+        "devices": {
+          "type": "array",
+          "maxItems": 512,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "uid",
+              "name",
+              "isDefault",
+              "exclusiveSupported"
+            ],
+            "properties": {
+              "uid": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "isDefault": {
+                "type": "boolean"
+              },
+              "exclusiveSupported": {
+                "type": "boolean"
+              },
+              "sharedSupported": {
+                "type": "boolean",
+                "default": true
+              }
+            }
+          }
+        },
+        "resamplingEnabled": {
+          "type": "boolean",
+          "default": false
+        },
+        "targetSampleRate": {
+          "type": "integer",
+          "enum": [
+            44100,
+            48000,
+            88200,
+            96000,
+            176400,
+            192000
+          ],
+          "default": 48000
+        }
+      }
+    },
+    "playbackEffectsPayload": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "fadeEnabled",
+        "volumeNormalizationEnabled"
+      ],
+      "properties": {
+        "fadeEnabled": {
+          "type": "boolean"
+        },
+        "volumeNormalizationEnabled": {
+          "type": "boolean"
+        }
+      }
+    },
+    "playbackEffects": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "supported",
+        "fadeEnabled",
+        "volumeNormalizationEnabled",
+        "normalizationActive"
+      ],
+      "properties": {
+        "supported": {
+          "type": "boolean"
+        },
+        "fadeEnabled": {
+          "type": "boolean"
+        },
+        "volumeNormalizationEnabled": {
+          "type": "boolean"
+        },
+        "normalizationActive": {
+          "type": "boolean"
+        }
+      }
+    },
+    "interruptionPayload": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "interruptionId",
+        "active"
+      ],
+      "properties": {
+        "interruptionId": {
+          "$ref": "#/$defs/id"
+        },
+        "active": {
+          "type": "boolean"
+        },
+        "allowResume": {
+          "type": "boolean",
+          "default": true
+        }
+      }
+    },
+    "outputSampleRates": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "schemaVersion",
+        "kind",
+        "event",
+        "systemRateHz",
+        "sourceRateHz",
+        "pcmRateHz",
+        "targetRateHz",
+        "resamplingEnabled",
+        "exclusive"
+      ],
+      "properties": {
+        "schemaVersion": {
+          "const": 1
+        },
+        "kind": {
+          "const": "outputSampleRates"
+        },
+        "event": {
+          "enum": [
+            "pcmConfigured",
+            "configurationUpdated",
+            "devicesRefreshed",
+            "systemFormatChanged",
+            "outputReady"
+          ]
+        },
+        "systemRateHz": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "minimum": 1,
+          "maximum": 2147483647
+        },
+        "sourceRateHz": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "minimum": 1,
+          "maximum": 2147483647
+        },
+        "pcmRateHz": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "minimum": 1,
+          "maximum": 2147483647
+        },
+        "targetRateHz": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 2147483647
+        },
+        "resamplingEnabled": {
+          "type": "boolean"
+        },
+        "exclusive": {
+          "type": "boolean"
+        }
+      }
+    }
+  },
+  "oneOf": [
+    {
+      "$ref": "#/$defs/command"
+    },
+    {
+      "$ref": "#/$defs/snapshot"
+    },
+    {
+      "$ref": "#/$defs/result"
+    },
+    {
+      "$ref": "#/$defs/operation"
+    },
+    {
+      "$ref": "#/$defs/sourceRequest"
+    },
+    {
+      "$ref": "#/$defs/outputSampleRates"
+    }
+  ]
+}

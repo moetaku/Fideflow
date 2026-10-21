@@ -1,0 +1,17 @@
+name: fideflow_media_host
+description: Dart FFI boundary to the Rust media core and native playback host.
+version: 0.1.0
+publish_to: none
+resolution: workspace
+
+environment:
+  sdk: ^3.12.2
+
+dependencies:
+  fideflow_ncm_gateway: ^0.1.0
+  ffi: ^2.1.0
+  fideflow_domain: ^0.1.0
+  fideflow_media_sdk: ^0.1.0
+
+dev_dependencies:
+  test: ^1.26.0

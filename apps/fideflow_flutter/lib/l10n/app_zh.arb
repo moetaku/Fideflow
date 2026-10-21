@@ -1,0 +1,1393 @@
+{
+  "windowMinimize": "最小化",
+  "windowMaximize": "最大化",
+  "windowRestore": "还原",
+  "@@locale": "zh",
+  "fideflowTheme": "Fideflow 主题",
+  "theThemeFileIsTooLarge": "主题文件过大",
+  "theSettingsDirectoryIsUnavailableAppearanceChangesApply": "配置目录不可用，外观仅在本次运行生效，主题可导出备份。",
+  "themeNamesMustContain140Characters": "主题名称必须为 1–40 字符",
+  "aThemeWithThisNameAlreadyExists": "主题名称已存在",
+  "savingPleaseWait": "正在保存，请稍候",
+  "couldNotSaveAppearancePleaseTryAgain": "保存外观失败，请重试",
+  "themeNotFound": "主题不存在",
+  "presetThemesCannotBeModified": "预设主题不可修改",
+  "presetThemesCannotBeDeleted": "预设主题不可删除",
+  "demoAccount": "体验账号 {arg0}",
+  "@demoAccount": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "couldNotSavePleaseTryAgain": "保存失败，请重试",
+  "closeMainWindow": "关闭主窗口",
+  "closingTheWindowHidesItInTheSystem": "关闭窗口将隐藏到系统托盘并继续播放，退出 Fideflow 将停止播放。",
+  "musicKeepsPlayingAfterTheWindowClosesClick": "关闭窗口后继续播放，点击 Dock 图标可恢复窗口。退出 Fideflow 将停止播放。",
+  "theSystemTrayIsUnavailableQuitFideflowOr": "系统托盘不可用，无法隐藏窗口。你可以退出 Fideflow 或取消。",
+  "doNotAskAgain": "不再询问",
+  "cancel": "取消",
+  "closeWindow": "关闭窗口",
+  "quitFideflow": "退出 Fideflow",
+  "whenClosingTheMainWindow": "关闭主窗口时",
+  "minimizeToSystemTray": "最小化到系统托盘",
+  "closeWindowAndKeepPlaying": "关闭窗口，继续播放",
+  "askEveryTime": "每次询问",
+  "all": "全部",
+  "couldNotInitializeSystemMediaControls": "系统媒体控制初始化失败",
+  "globalShortcutsAreAvailableOnlyInSupportedNative": "全局快捷键仅在支持的桌面原生应用中可用",
+  "couldNotSaveShortcutsPleaseTryAgain": "快捷键设置保存失败，请重试",
+  "couldNotRestoreGlobalShortcutsEnableThemAgain": "全局快捷键恢复失败，请重新启用",
+  "playbackFailedPleaseTryAgain": "播放操作失败，请重试",
+  "onlyNeteaseCloudMusicTracksAreSupported": "仅支持网易云歌曲",
+  "signInThroughAccountSettingsFirst": "请先在账号设置中登录",
+  "couldNotLoadFavoritesPleaseTryAgain": "喜欢状态加载失败，请重试",
+  "couldNotUpdateFavoritesPleaseTryAgain": "喜欢歌曲操作失败，请重试",
+  "couldNotSyncSystemMediaInformation": "系统媒体信息同步失败",
+  "unknownAudioQuality": "音质未知",
+  "playPause": "播放/暂停",
+  "previousTrack": "上一首",
+  "nextTrack": "下一首",
+  "volumeUp": "音量加",
+  "volumeDown": "音量减",
+  "likeUnlike": "喜欢/取消喜欢",
+  "enter": "回车",
+  "backspace": "退格",
+  "space": "空格",
+  "unsupportedKey": "{arg0}：不支持此按键",
+  "@unsupportedKey": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "duplicateShortcut2": "{arg0}：快捷键重复",
+  "@duplicateShortcut2": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "globalShortcutsMustIncludeOrCtrl": "全局快捷键需包含 ⌘ 或 Ctrl",
+  "thisCombinationIsAlreadyUsedForForwardBack": "此组合已用于前进/后退",
+  "signInToNeteaseWithAQrCode": "网易云扫码登录",
+  "generatingSignInQrCode": "正在生成登录二维码...",
+  "neteaseSignInQrCode": "网易云登录二维码",
+  "scanWithTheNeteaseCloudMusicAppTo": "请使用网易云音乐 App 扫码登录",
+  "theQrCodeExpiresIn2Minutes": "二维码有效期 2 分钟",
+  "qrCodeScanned": "扫码成功",
+  "confirmOnYourPhoneToFinishSigningIn": "请在手机上点击确认以完成登录",
+  "signedIn": "登录成功！",
+  "signInFailed": "登录失败",
+  "getANewQrCode": "重新获取二维码",
+  "albumLinkCopied": "已复制专辑链接",
+  "album": "专辑",
+  "tracks": "共 {arg0} 首歌曲{arg1}",
+  "@tracks": {
+    "placeholders": {
+      "arg0": {
+        "type": "int"
+      },
+      "arg1": {
+        "type": "String"
+      }
+    }
+  },
+  "playLoadedTracks": "播放当前已加载 {arg0} 首",
+  "@playLoadedTracks": {
+    "placeholders": {
+      "arg0": {
+        "type": "int"
+      }
+    }
+  },
+  "playAll": "播放全部",
+  "sortsOnlyTheTracksCurrentlyLoaded": "（仅按当前已加载曲目排序）",
+  "shareAlbumLink": "分享专辑链接",
+  "noPlayableTracksInThisAlbum": "此专辑暂无可播放歌曲",
+  "artist": "歌手",
+  "back": "返回",
+  "tracksAlbums": "单曲 {arg0} · 专辑 {arg1}",
+  "@tracksAlbums": {
+    "placeholders": {
+      "arg0": {
+        "type": "int"
+      },
+      "arg1": {
+        "type": "int"
+      }
+    }
+  },
+  "popularTracks": "热门单曲 ({arg0}首)",
+  "@popularTracks": {
+    "placeholders": {
+      "arg0": {
+        "type": "int"
+      }
+    }
+  },
+  "noPopularTracksForThisArtist": "此歌手暂无热门单曲",
+  "unlike": "取消喜欢",
+  "favoriteStatusUnknownClickToLoad": "喜欢状态未知，点击加载",
+  "like": "喜欢",
+  "likeMusic": "喜欢音乐",
+  "signInToSyncYourFavoriteMusic": "请先登录账号以同步喜欢的音乐。",
+  "ok": "确定",
+  "addToPlaylist": "收藏到歌单",
+  "signInToAddMusicToPlaylists": "请先登录账号以使用歌单收藏功能。",
+  "language": "语种",
+  "genre": "风格",
+  "activity": "场景",
+  "mood": "情感",
+  "theme": "主题",
+  "chinese": "华语",
+  "western": "欧美",
+  "japanese": "日语",
+  "korean": "韩语",
+  "cantonese": "粤语",
+  "otherLanguages": "小语种",
+  "pop": "流行",
+  "rock": "摇滚",
+  "folk": "民谣",
+  "electronic": "电子",
+  "dance": "舞曲",
+  "rap": "说唱",
+  "easyListening": "轻音乐",
+  "jazz": "爵士",
+  "country": "乡村",
+  "classical": "古典",
+  "traditional": "民族",
+  "britpop": "英伦",
+  "metal": "金属",
+  "punk": "朋克",
+  "blues": "蓝调",
+  "reggae": "雷鬼",
+  "worldMusic": "世界音乐",
+  "latin": "拉丁",
+  "chineseTraditionalStyle": "古风",
+  "postRock": "后摇",
+  "morning": "清晨",
+  "night": "夜晚",
+  "study": "学习",
+  "work": "工作",
+  "nap": "午休",
+  "afternoonTea": "下午茶",
+  "subway": "地铁",
+  "driving": "驾车",
+  "workout": "运动",
+  "travel": "旅行",
+  "walking": "散步",
+  "bar": "酒吧",
+  "nostalgic": "怀旧",
+  "fresh": "清新",
+  "romantic": "浪漫",
+  "melancholic": "伤感",
+  "healing": "治愈",
+  "relaxing": "放松",
+  "lonely": "孤独",
+  "moving": "感动",
+  "exciting": "兴奋",
+  "happy": "快乐",
+  "quiet": "安静",
+  "longing": "思念",
+  "varietyShows": "综艺",
+  "soundtracks": "影视原声",
+  "children": "儿童",
+  "school": "校园",
+  "games": "游戏",
+  "bornInThe70S": "70后",
+  "bornInThe80S": "80后",
+  "bornInThe90S": "90后",
+  "internetSongs": "网络歌曲",
+  "classics": "经典",
+  "covers": "翻唱",
+  "guitar": "吉他",
+  "piano": "钢琴",
+  "instrumental": "器乐",
+  "couldNotLoadTagsRetryOrKeepThe": "标签加载失败，可重试或保留原标签",
+  "theAccountHasChangedCloseAndReopenThis": "账号已切换，请关闭后重新打开",
+  "playlistNameCannotBeEmpty": "歌单名称不能为空",
+  "composedText": "{arg0}{arg1}",
+  "@composedText": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      },
+      "arg1": {
+        "type": "String"
+      }
+    }
+  },
+  "createPlaylist": "创建歌单",
+  "editPlaylistInformation": "修改歌单信息",
+  "name": "名称",
+  "enterPlaylistName": "请输入歌单名称",
+  "descriptionCanBeCleared": "简介（可清空）",
+  "tellUsAboutThisPlaylist": "介绍一下这个歌单吧",
+  "privatePlaylist": "私密歌单",
+  "tags": "标签：",
+  "choose": "选择...",
+  "editTags": "修改标签",
+  "keepPlaylistAndClose": "保留歌单并关闭",
+  "saving": "保存中…",
+  "save": "保存",
+  "selectUpTo3Tags": "标签最多选择3个",
+  "official": "官方",
+  "noTags": "暂无标签",
+  "text3TagsSelected": "已选 {arg0}/3 个标签",
+  "@text3TagsSelected": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "theAccountHasChangedReopenThisDialog": "账号已切换，请重新打开",
+  "addTracksToAPlaylist": "添加 {arg0} 首歌曲到歌单",
+  "@addTracksToAPlaylist": {
+    "placeholders": {
+      "arg0": {
+        "type": "int"
+      }
+    }
+  },
+  "searchYourPlaylists": "搜索自建歌单",
+  "couldNotLoadPlaylistsRetry": "歌单加载失败，重试",
+  "onlyLoadedPlaylistsYouCreatedAreShownRefresh": "仅显示已加载的自建歌单，可刷新加载",
+  "tracks2": "{arg0} 首",
+  "@tracks2": {
+    "placeholders": {
+      "arg0": {
+        "type": "int"
+      }
+    }
+  },
+  "refresh": "刷新",
+  "createPlaylistAndAddTracks": "新建歌单并添加",
+  "unsubscribe": "取消收藏",
+  "checkSubscriptionStatus": "查看收藏状态",
+  "subscribeToPlaylist": "收藏歌单",
+  "reorder": "调整顺序",
+  "loadAllTracksToReorder": "完整加载后可排序",
+  "loadingSubscriptions": "加载收藏中",
+  "retryLoadingSubscriptions": "重试加载收藏",
+  "subscribed": "已收藏",
+  "subscribeToAlbum": "收藏专辑",
+  "editInformation": "编辑信息",
+  "deletePlaylist": "删除歌单",
+  "deleteThisPlaylist": "删除自建歌单？",
+  "tracksThisCannotBeUndone": "“{arg0}”，{arg1} 首歌曲。删除后无法恢复。",
+  "@tracksThisCannotBeUndone": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      },
+      "arg1": {
+        "type": "int"
+      }
+    }
+  },
+  "delete": "删除",
+  "theAccountHasChangedConfirmDeletionAgain": "账号已变化，请重新确认删除",
+  "deleted": "删除成功",
+  "reorderTracks": "调整歌曲顺序",
+  "moveUp": "上移",
+  "moveDown": "下移",
+  "saveOrder": "保存顺序",
+  "resultIsPendingClickToVerify": "{arg0}结果待确认，点击核对",
+  "@resultIsPendingClickToVerify": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "verifyOperationResult": "核对操作结果",
+  "hundredMillion": "{arg0}亿",
+  "@hundredMillion": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "tenThousand": "{arg0}万",
+  "@tenThousand": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "playlistLinkCopied": "已复制歌单链接",
+  "thisPlaylistWasDeleted": "此歌单已删除",
+  "myFavoriteMusic": "我喜欢的音乐",
+  "localPlaybackHistory": "本地播放历史",
+  "playlist": "歌单",
+  "created": "{arg0}-{arg1}-{arg2} 创建",
+  "@created": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      },
+      "arg1": {
+        "type": "String"
+      },
+      "arg2": {
+        "type": "String"
+      }
+    }
+  },
+  "tracksPartiallyLoaded": "{arg0} / {arg1} 首歌曲 (部分加载) · {arg2}",
+  "@tracksPartiallyLoaded": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      },
+      "arg1": {
+        "type": "String"
+      },
+      "arg2": {
+        "type": "String"
+      }
+    }
+  },
+  "tracks3": "{arg0} 首歌曲 · {arg1}",
+  "@tracks3": {
+    "placeholders": {
+      "arg0": {
+        "type": "int"
+      },
+      "arg1": {
+        "type": "String"
+      }
+    }
+  },
+  "playedTimes": "播放 {arg0} 次",
+  "@playedTimes": {
+    "placeholders": {
+      "arg0": {
+        "type": "int",
+        "format": "compact"
+      }
+    }
+  },
+  "subscriptions": "收藏 {arg0} 次",
+  "@subscriptions": {
+    "placeholders": {
+      "arg0": {
+        "type": "int",
+        "format": "compact"
+      }
+    }
+  },
+  "retryLoading": "重试加载",
+  "batchActions": "批量操作",
+  "sharePlaylistLink": "分享歌单链接",
+  "someTracksCouldNotBeLoadedShowingThe": "部分歌曲加载失败，仅显示前 {arg0} 首",
+  "@someTracksCouldNotBeLoadedShowingThe": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "retry": "重试",
+  "selected": "已选 {arg0} 首",
+  "@selected": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "play": "播放",
+  "addToPlayQueue": "添加到播放列表",
+  "subscribe": "收藏",
+  "done": "完成",
+  "loadingTracks": "正在加载歌曲列表...",
+  "noPlayableTracksInThisPlaylist": "此歌单暂无可播放歌曲",
+  "privatePlaylistOrAccessDenied": "私密歌单或无权访问",
+  "theCreatorMadeThisPlaylistPrivateOrLimited": "该歌单已被创建者设置为私密或仅特定账号可见",
+  "noDetailsAvailableForThis": "该{arg0}暂无详情",
+  "@noDetailsAvailableForThis": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "couldNotLoad": "加载{arg0}失败",
+  "@couldNotLoad": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "default2": "默认",
+  "trackName": "歌曲名",
+  "duration": "时长",
+  "sort": "排序",
+  "selectAllTracks": "全选歌曲",
+  "title": "标题",
+  "playedAt": "播放时间",
+  "trackLinkCopied": "已复制歌曲链接",
+  "select": "选择 {arg0}",
+  "@select": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "moreActions": "更多操作",
+  "playNext": "下一首播放",
+  "addToQueue": "添加到队列",
+  "addToPlaylist2": "添加到歌单",
+  "removeFromPlaylist": "从歌单移除",
+  "deletePlaybackHistory": "删除播放记录",
+  "copyTrackLink": "复制歌曲链接",
+  "free": "免费",
+  "preview": "试听",
+  "unavailable": "无音源",
+  "month": "{arg0}月",
+  "@month": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "dailyTrackRecommendations": "每日歌曲推荐",
+  "basedOnYourTasteUpdatedDailyAt6": "根据你的音乐口味生成，每天6:00更新",
+  "couldNotLoadRecommendedTracks": "推荐歌曲加载失败: {arg0}",
+  "@couldNotLoadRecommendedTracks": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "couldNotLoadYourPlaylistsPleaseTryAgain": "个人歌单加载失败，请重试",
+  "noPlaylists": "暂无歌单",
+  "tracks4": "共 {arg0} 首歌曲",
+  "@tracks4": {
+    "placeholders": {
+      "arg0": {
+        "type": "int"
+      }
+    }
+  },
+  "loadTracks": "加载歌曲列表",
+  "you": "你",
+  "savedFavoriteTracks": "{arg0} 收藏的 {arg1} 首心动旋律",
+  "@savedFavoriteTracks": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      },
+      "arg1": {
+        "type": "int"
+      }
+    }
+  },
+  "playAll2": "播放全部 ({arg0})",
+  "@playAll2": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "noFavoriteTracks": "暂无收藏歌曲",
+  "signInToNeteaseCloudMusic": "登录网易云音乐",
+  "listenToYourFavoriteTracks": "查看并播放你收藏的红心歌曲",
+  "scanToSignIn": "点击登录",
+  "heartbeatModeIsActiveClickToExit": "当前处于心动模式，点击退出",
+  "loadingHeartbeatRecommendations": "正在加载心动推荐...",
+  "startHeartbeatModeEndlessRecommendationsBasedOnYour": "开启心动模式：基于红心歌曲智能无限推荐",
+  "starting": "正在开启...",
+  "heartbeatModeActive": "心动模式中",
+  "startHeartbeatMode": "开启心动模式",
+  "exitHeartbeatMode": "退出心动模式？",
+  "addingTracksManuallyWillExitHeartbeatModeContinue": "当前处于心动模式，手动加歌将退出心动模式，是否继续？",
+  "exitAndAdd": "退出并添加",
+  "favoriteMusic": "喜欢的音乐",
+  "onlineMusic": "在线音乐",
+  "recommendations": "推荐",
+  "featuredPlaylists": "精选歌单",
+  "myMusic": "我的音乐",
+  "recentlyPlayed": "最近播放",
+  "couldNotRestoreSignIn": "恢复登录失败",
+  "neteaseVipMember": "网易云 VIP 会员",
+  "neteaseCloudMusicUser": "网易云音乐用户",
+  "accountActions": "账户操作",
+  "signOut": "退出登录",
+  "couldNotSignOutPleaseTryAgainLater": "退出登录失败，请稍后重试",
+  "restoringSignIn": "正在恢复登录",
+  "couldNotRestoreSignIn2": "登录恢复失败",
+  "pleaseWait": "请稍候",
+  "yourCredentialsHaveBeenKeptClickToRetry": "凭据已保留，点击重试",
+  "localGuest": "本地访客",
+  "signInToSyncPlaylists": "登录以同步歌单",
+  "signInToSyncPlaylistsAndListeningHistory": "登录网易云音乐\n同步歌单与听歌记录",
+  "albumDetailsAreUnavailableInThisEnvironment": "当前环境不支持查看专辑详情",
+  "artistDetailsAreUnavailableInThisEnvironment": "当前环境不支持查看歌手详情",
+  "back2": "后退",
+  "forward": "前进",
+  "searchMusicArtistsAlbums": "搜索音乐、歌手、专辑...",
+  "settings": "设置",
+  "couldNotLoad2": "加载失败",
+  "noMusicToPlayYet": "还没有可以播放的音乐",
+  "searchForATrackOrSignInTo": "搜索歌曲开始播放，或登录网易云音乐查看你的歌单。",
+  "playlistsICreated": "我创建的歌单",
+  "playlistsISubscribedTo": "我收藏的歌单",
+  "albumsISubscribedTo": "我收藏的专辑",
+  "syncYourFavoritesAndPlaybackHistoryAcrossDevices": "跨设备同步你的收藏与播放记录",
+  "signInToSeePlaylistsYouCreated": "登录后查看你创建的歌单",
+  "signInToSeeYourSubscribedPlaylists": "登录后查看你收藏的歌单",
+  "signInToSeeYourSubscribedAlbums": "登录后查看你收藏的专辑",
+  "reload": "重新加载",
+  "playlistsArePartiallyLoadedShowingPlaylists": "歌单列表未完全载入，当前显示 {arg0} 个歌单",
+  "@playlistsArePartiallyLoadedShowingPlaylists": {
+    "placeholders": {
+      "arg0": {
+        "type": "int"
+      }
+    }
+  },
+  "couldNotUpdateYourPlaylistsShowingPreviouslyLoaded": "个人歌单更新失败，当前显示上次加载的内容",
+  "noPlaylistsCreatedYet": "还没有创建的歌单",
+  "noSubscribedPlaylistsYet": "还没有收藏的歌单",
+  "ownershipUnconfirmed": "归属待确认",
+  "creator": "创建者: ",
+  "creator2": "创建者：",
+  "tracks5": "{arg0}首",
+  "@tracks5": {
+    "placeholders": {
+      "arg0": {
+        "type": "int"
+      }
+    }
+  },
+  "albumSubscriptionsAreUnavailable": "专辑收藏暂不可用",
+  "couldNotLoadAlbumSubscriptionsPleaseTryAgain": "专辑收藏加载失败，请重试",
+  "couldNotUpdateAlbumSubscriptionsShowingPreviouslyLoaded": "专辑收藏更新失败，当前显示上次加载的内容",
+  "noSubscribedAlbumsYet": "还没有收藏的专辑",
+  "couldNotLoadPlaylists": "歌单加载失败: {arg0}",
+  "@couldNotLoadPlaylists": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "youHaveReachedTheEnd": "已经到底啦",
+  "moreCategories": "更多分类",
+  "noMoreCategories": "暂无更多分类",
+  "signInFirst": "请先登录",
+  "signInToSaveMusicPlaylistsAndAlbums": "登录账号后可收藏音乐、歌单和专辑。",
+  "localTracksCannotBeAddedToOnlinePlaylists": "本地歌曲暂不支持收藏到在线歌单",
+  "localTracksWereSkippedOnlyOnlineTracksWere": "本地歌曲已跳过，仅收藏在线歌曲",
+  "localPlaylistsCannotBeSubscribedToOnline": "本地歌单暂不支持在线收藏",
+  "youDoNotHaveAccessToThisPrivate": "没有访问此私密歌单的权限",
+  "thisPlaylistIsAlreadyInYourLibrary": "此歌单已在你的音乐库中",
+  "couldNotConfirmSubscriptionStatusPleaseTryAgain": "无法确认收藏状态，请重试",
+  "localAlbumsCannotBeSubscribedToOnline": "本地专辑暂不支持在线收藏",
+  "clearList": "清空列表",
+  "clearLocalPlaybackHistoryForThisCategory": "清空此分类的本地播放记录？",
+  "clear": "清空",
+  "tracks6": "首歌曲",
+  "playlists": "个歌单",
+  "albums": "张专辑",
+  "localPlaybackHistoryKeepsTheLatest1000Items": "本机播放记录 · 共 {arg0} {arg1} · 每类保留最近 1000 项",
+  "@localPlaybackHistoryKeepsTheLatest1000Items": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      },
+      "arg1": {
+        "type": "String"
+      }
+    }
+  },
+  "tracks7": "歌曲",
+  "lyrics": "歌词",
+  "subscribeToAll": "收藏全部",
+  "noPlaybackHistory": "暂无播放记录",
+  "trackCount": "歌曲数",
+  "accessDenied": "无权访问",
+  "accessDeniedCannotSubscribe": "无权访问，无法收藏",
+  "noRecommendedTracksToday": "今日推荐曲目为空",
+  "networkErrorCouldNotLoadTodaySRecommendations": "网络连接异常，无法加载今日推荐",
+  "couldNotLoadRecommendations": "推荐加载失败: {arg0}",
+  "@couldNotLoadRecommendations": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "newTracksPickedForYourTasteEveryDay": "根据你的音乐口味生成，每日为你带来最新好歌",
+  "recommendedPlaylists": "推荐歌单",
+  "frequentlyPlayed": "最近常听",
+  "viewPlaybackHistory": "查看播放历史 >",
+  "thisResourceTypeCannotBeOpenedYet": "暂不支持打开此类型资源",
+  "minutesAgo": "{arg0}分钟前",
+  "@minutesAgo": {
+    "placeholders": {
+      "arg0": {
+        "type": "int"
+      }
+    }
+  },
+  "hoursAgo": "{arg0}小时前",
+  "@hoursAgo": {
+    "placeholders": {
+      "arg0": {
+        "type": "int"
+      }
+    }
+  },
+  "daysAgo": "{arg0}天前",
+  "@daysAgo": {
+    "placeholders": {
+      "arg0": {
+        "type": "int"
+      }
+    }
+  },
+  "composedText2": "{arg0}月{arg1}日",
+  "@composedText2": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      },
+      "arg1": {
+        "type": "String"
+      }
+    }
+  },
+  "dailyPicksJustForYou": "DAILY PICKS · 每日专属",
+  "dailyRecommendations": "每日推荐",
+  "newTracksPickedJustForYouEveryDay": "根据你的音乐口味生成，每日为你带来最新专属好歌",
+  "heartbeat": "心动",
+  "heartbeatEndlessDiscovery": "HEARTBEAT · 心动无限",
+  "heartbeatMode": "心动模式",
+  "exploreMusicThatUnderstandsYouBasedOnYour": "基于你喜爱的音乐，智能算法为你无限探索懂你的声音",
+  "loadingHeartbeatRecommendations2": "正在加载心动推荐",
+  "startHeartbeatMode2": "开始心动模式",
+  "heartbeatModeLoadingRecommendations": "心动模式 · 正在加载推荐",
+  "heartbeatRecommendationsPausedClickToRetry": "心动推荐已暂停，点击重试",
+  "retryRecommendations": "重试推荐",
+  "exitHeartbeat": "退出心动",
+  "instrumentalMusicEnjoy": "纯音乐，请欣赏",
+  "noLyricsAvailable": "暂无歌词",
+  "loadingLyrics": "歌词加载中…",
+  "close": "关闭",
+  "nowPlaying": "正在播放",
+  "paused": "已暂停",
+  "noAlbumDetailsAvailable": "暂无可跳转的专辑详情",
+  "noPlayableTracks": "暂无可播放的歌曲",
+  "theQueueIsEmptyPickATrackFrom": "队列是空的，从歌单里选一首开始",
+  "pause": "暂停",
+  "sequential": "顺序播放",
+  "loopAll": "列表循环",
+  "repeatOne": "单曲循环",
+  "shuffle": "随机播放",
+  "sequentialFollowTheRecommendationOrderThenWaitFor": "顺序播放：沿推荐顺序播放，末尾等待新推荐",
+  "loopAllReturnToTheFirstTrackAfter": "列表循环：最后一首播完回到第一首",
+  "repeatOneRestartThisTrackWhenItEnds": "单曲循环：这首歌结束后重新开始",
+  "shuffleRandomizeTheOrderWithoutChangingTheCurrent": "随机播放：顺序打乱，正在听的这首不变",
+  "playbackPausedByASystemInterruption": "系统中断，播放已暂停",
+  "audioOutputInterruptedClickPlayToRetry": "音频输出中断，点击播放重试",
+  "playbackFailed": "播放失败",
+  "buffering": "缓冲中…",
+  "preparing": "准备中…",
+  "chooseATrackToStartListening": "选择一首音乐开始播放",
+  "playQueue": "播放队列",
+  "switchingAudioQuality": "正在切换音质…",
+  "currentAudioQualityUnknownSwitching": "当前音质未知，正在切换…",
+  "stillPlayingAtSwitching": "当前仍为 {arg0}，正在切换…",
+  "@stillPlayingAtSwitching": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "chooseAudioQuality": "选择音质",
+  "standard": "标准",
+  "high": "极高",
+  "lossless": "无损",
+  "highResolutionLosslessHiRes": "高解析度无损  Hi-Res",
+  "losslessSq": "无损 (SQ)",
+  "highHq": "极高 (HQ)",
+  "fullerClearerHighResolutionAudioUpTo192": "更饱满清晰的高解析度音质，最高192kHz/24bit",
+  "highFidelityLosslessAudioUpTo48Khz": "高保真无损音质，最高48kHz/16bit",
+  "nearCdQualityWithDetailedSoundUpTo": "近 CD 音质的细节体验，最高320kbps",
+  "thisAudioQualityRequiresVipMembership": "该音质为 VIP 专享，当前账号暂无权限",
+  "audioQuality": "音质",
+  "closeAudioQualitySelection": "关闭音质选择",
+  "closeQueue": "关闭队列",
+  "showAllArtists": "展开全部（共 {arg0} 位）",
+  "@showAllArtists": {
+    "placeholders": {
+      "arg0": {
+        "type": "int"
+      }
+    }
+  },
+  "collapse": "收起",
+  "noArtistDetailsAvailable": "暂无可跳转的歌手详情",
+  "unmute": "取消静音",
+  "mute": "静音",
+  "volume": "音量",
+  "playableOnly": "只看可播放",
+  "excludePreviewsAndUnconfirmedSourcesShowOnlyFully": "排除试听与未确认音源（严格仅保留完整可播曲目）",
+  "audioQuality2": "音质：",
+  "sqLossless": "SQ 无损",
+  "hqHighQuality": "HQ 高品质",
+  "search": "搜索",
+  "search2": "搜索 “{arg0}”",
+  "@search2": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "searchFailed": "搜索失败: {arg0}",
+  "@searchFailed": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "noMatchesAmongLoadedTracksLoadMoreTo": "已加载 {arg0} 首歌曲中无匹配项，可继续加载更多",
+  "@noMatchesAmongLoadedTracksLoadMoreTo": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "noMatchingTracks": "未搜索到相关歌曲",
+  "loadMore": "加载更多",
+  "noMatchingPlaylists": "未搜索到相关歌单",
+  "noMatchingAlbums": "未搜索到相关专辑",
+  "noMatchingArtists": "未搜索到相关歌手",
+  "couldNotLoadMore": "加载更多失败: {arg0}",
+  "@couldNotLoadMore": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "allResultsShown": "已显示全部结果",
+  "accent": "强调色",
+  "background": "背景",
+  "panel": "面板",
+  "text": "正文",
+  "secondaryText": "次要文字",
+  "border": "边框",
+  "successColor": "成功色",
+  "warningColor": "警告色",
+  "errorColor": "错误色",
+  "operationFailedPleaseTryAgain": "操作失败，请重试",
+  "copy": "{arg0} 副本",
+  "@copy": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "deleteTheme": "删除主题",
+  "delete2": "删除“{arg0}”？{arg1}",
+  "@delete2": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      },
+      "arg1": {
+        "type": "String"
+      }
+    }
+  },
+  "themesAndColors": "主题与颜色",
+  "chooseAColorSchemeOrCreateYourOwn": "选择完整配色，或创建自己的主题。",
+  "dark": "深色",
+  "light": "浅色",
+  "duplicate": "复制",
+  "actions": "{arg0} 操作",
+  "@actions": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "themeExported": "主题已导出",
+  "edit": "编辑",
+  "rename": "重命名",
+  "exportJson": "导出 JSON",
+  "createCustomTheme": "创建自定义主题",
+  "importedClickTheThemeToApplyIt": "已导入“{arg0}”，点击主题可应用",
+  "@importedClickTheThemeToApplyIt": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "importJson": "导入 JSON",
+  "currentThemeAccentColor": "当前主题强调色",
+  "restoreDefaultColor": "恢复默认色",
+  "renameTheme": "重命名主题",
+  "themeName": "主题名称",
+  "apply": "应用",
+  "customThemeBadge": "自定义",
+  "customTheme": "自定义主题",
+  "textAndBackgroundContrastIsLowConsiderAdjusting": "文字与背景对比度较低，建议调整颜色；仍可保存。",
+  "saveAndApply": "保存并应用",
+  "livePreview": "实时预览",
+  "cardAndBodyText": "卡片与正文",
+  "secondaryTextAndDescriptions": "次要文字与说明",
+  "textFieldPreview": "输入框预览",
+  "primaryButton": "主要按钮",
+  "secondaryButton": "次要按钮",
+  "disabled": "禁用",
+  "selectedListItem": "已选中列表项",
+  "success": "成功",
+  "warning": "警告",
+  "error": "错误",
+  "saturationAndBrightnessColorPanel": "饱和度与亮度调色面板",
+  "hue": "色相",
+  "hue2": "色相 {arg0}°",
+  "@hue2": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "hueDegrees": "色相 {arg0} 度",
+  "@hueDegrees": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "saturation": "饱和度",
+  "saturation2": "饱和度 {arg0}%",
+  "@saturation2": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "brightness": "亮度",
+  "brightness2": "亮度 {arg0}%",
+  "@brightness2": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "hexColor": "HEX 颜色",
+  "thePlaybackDeviceIsDisconnectedOrUnavailablePlayback": "播放设备已断开或不可用，已停止播放并回退到默认输出设备。",
+  "audioOutputWasInterruptedCheckTheDeviceThen": "音频输出已中断，请检查设备后点击播放重试。",
+  "couldNotAcquireExclusiveAccessTheDeviceMay": "无法独占此设备，设备可能被其他应用占用或不支持独占。",
+  "couldNotRefreshPlaybackDevicesPleaseTryAgain": "无法刷新播放设备，请重试。",
+  "thisVersionDoesNotProvideAudioDeviceControls": "此版本未提供音频设备控制。",
+  "audioOutputFailedCheckTheDeviceAndTry": "音频输出失败，请检查设备后重试。",
+  "noDevicesAvailable": "暂无可用设备",
+  "defaultOutputDevice": "默认输出设备（{arg0}）",
+  "@defaultOutputDevice": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "selectedDeviceUnavailable": "所选设备不可用",
+  "exclusiveMode": "{arg0}（独占模式）",
+  "@exclusiveMode": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "couldNotSavePlaybackDeviceSettingsPleaseTry": "播放设备设置失败，请重试。",
+  "playbackDeviceSettingsAreUnavailableInThisVersion": "此版本暂不支持播放设备设置。",
+  "playbackDevice": "播放设备",
+  "refreshPlaybackDevices": "刷新播放设备",
+  "theDeviceListHasChangedItRefreshesWhen": "设备列表有更新，打开选择器时刷新。",
+  "exclusiveAccessToThePlaybackDevice": "正在独占播放设备",
+  "acquireExclusiveAccessDuringPlaybackAndReleaseIt": "播放时独占设备，暂停时释放。",
+  "exclusivePlaybackPrefersTheTrackSSampleRate": "独占播放优先使用歌曲采样率，不支持时转换。音量由应用软件控制。",
+  "retryRefresh": "重试刷新",
+  "cacheSettingsWereNotSavedPleaseTryAgain": "缓存设置未保存，请重试",
+  "clearCachedAudioAndLyrics": "清理音频与歌词缓存？",
+  "deletesLocallyCachedAudioAndLyricsYourFavorite": "将删除本地已缓存的音频文件和歌词。不会影响已收藏的歌曲或导入的本地音乐。",
+  "clear2": "清理",
+  "gbUsedGbLimit": "已使用 {arg0} GB · 上限 {arg1} GB ({arg2}%)",
+  "@gbUsedGbLimit": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      },
+      "arg1": {
+        "type": "String"
+      },
+      "arg2": {
+        "type": "String"
+      }
+    }
+  },
+  "gbAvailable": "剩余可用 {arg0} GB",
+  "@gbAvailable": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "allAudioQualitiesShareTheLimitOlderUnused": "多音质文件共用容量，自动清理较久未使用的缓存。",
+  "nextTracks": "接下来首数",
+  "entireQueue": "全队列",
+  "tracks8": "首",
+  "cacheRange": "缓存范围",
+  "cacheWithinTheStorageLimitTurningOffAutomatic": "按容量上限尽量缓存；关闭自动缓存会保留已缓存的内容。",
+  "audioAndLyricsCache": "音频与歌词缓存",
+  "clearAudioAndLyricsCache": "清理音频与歌词缓存",
+  "automaticallyCacheAudio": "自动缓存音频",
+  "cacheTheSelectedAudioQualityAheadOfTime": "按选定音质预先缓存，当前播放优先；试听仅缓存允许的部分。",
+  "storageLimit": "容量上限",
+  "filesCurrentlyBeingReadAreKeptUntilReading": "正在读取的文件会保留，读取结束后参与自动清理。",
+  "couldNotSavePlaybackEffectsPleaseTryAgain": "播放效果设置失败，请重试。",
+  "fadeInAndOut": "淡入淡出",
+  "useA300MsVolumeTransitionWhenPlaying": "播放、暂停和切歌时使用 300 毫秒的音量过渡。",
+  "normalizeTrackVolume": "平衡歌曲音量",
+  "useTheTrackSGainDataToBalance": "使用歌曲提供的增益平衡音量，未提供数据的歌曲保持原音量。",
+  "playbackEffectsAreUnavailableInThisVersion": "此版本暂不支持播放效果设置。",
+  "thisVersionHasNoAudioQualityPreferenceStorage": "这个版本没有可用的音质偏好存储，因此无法在这里选择音质。",
+  "selectedPreference": "当前选择的偏好",
+  "actualPlaybackQuality": "当前实际音质",
+  "losslessAndHiResAudioRequireVipMembership": "无损与 Hi-Res 音质为 VIP 专享，当前账号暂无权限。",
+  "account": "账号",
+  "general": "常规",
+  "shortcuts": "快捷键",
+  "about": "关于",
+  "addSwitchAndSignOutOfAccounts": "添加、切换与退出账号",
+  "appearanceAndGeneralAppBehavior": "应用的外观与通用行为",
+  "defaultPlaybackAndQueueBehavior": "播放与队列的默认行为",
+  "keyboardShortcutsAndQuickActions": "键盘与快捷操作",
+  "audioQualityPreferencesForOnlinePlayback": "在线播放的音质偏好",
+  "versionAndProjectInformation": "版本与项目信息",
+  "version": "版本",
+  "thereAreNoSettingsToAdjustHereYet": "这里暂时没有可以调整的设置项，等对应功能确定行为后再加。",
+  "versionAndProjectInformationWillBeAddedIn": "本项目面向网易云音乐服务进行开源技术探索，不提供或分发音乐内容。音乐内容版权归平台及相关权利方所有；本项目与网易云音乐无隶属或授权关系。",
+  "githubProject": "前往GitHub",
+  "neteaseOfficialWebsite": "网易云音乐官网",
+  "openSourceProjectDeclaration": "开源项目声明",
+  "unverified": "待核验",
+  "thisQualityTierHasNotBeenVerifiedAgainst": "尚未用真实响应核验该档位的请求与回退，暂不可选。",
+  "shortcutsAreAvailableOnlyInTheMacosApp": "快捷键仅在 macOS 应用中可用",
+  "accountOperationFailedRetryOrRemoveTheAccount": "账号操作失败，请重试；也可选择从本机移除",
+  "removeAccountFromThisDevice": "从本机移除账号？",
+  "deletesLocalSignInInformationPrivateCacheAnd": "将删除 {arg0} 的本机登录信息、私有缓存和播放记录。此操作不会注销远端会话。",
+  "@deletesLocalSignInInformationPrivateCacheAnd": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "remove": "移除",
+  "accountManagementIsUnavailableInThisVersion": "这个版本没有接入账号状态。",
+  "notSignedInUsingAsALocalGuest": "未登录 · 以本地访客身份使用",
+  "signInAgainRequired": "需要重新登录",
+  "currentlyActive": "当前使用 · {arg0}",
+  "@currentlyActive": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "signInAgain": "重新登录",
+  "switch2": "切换",
+  "accountActions2": "账号操作",
+  "signOut2": "退出账号",
+  "removeFromThisDevice": "从本机移除",
+  "addAccount": "添加账号",
+  "retryRestoringSignIn": "重试恢复登录",
+  "retryRestoringPlaybackHistory": "重试恢复播放记录",
+  "accountSwitchedButPlaybackHistoryCouldNotBe": "账号已切换，播放记录恢复失败，请重试",
+  "anAuroraInspiredHighResolutionMusicExperience": "还原纯粹听感，专注高保真音频体验。",
+  "notSet": "未设置",
+  "description": "功能说明",
+  "globalShortcuts": "全局快捷键",
+  "enableGlobalShortcuts": "启用全局快捷键",
+  "respondEvenWhenTheAppIsInThe": "应用在后台时也能响应",
+  "useSystemMediaShortcuts": "使用系统媒体快捷键",
+  "mediaKeysAndControlCenterPlayPauseSkip": "媒体键与控制中心：播放、暂停、切歌、停止和进度",
+  "globalShortcutsAndSystemMediaControlsAreAvailable": "全局快捷键和系统媒体控制仅在支持的桌面原生应用中可用",
+  "restoreDefaults": "恢复默认",
+  "unsupportedKeyUseLettersNumbersArrowsOrFunction": "不支持此按键，请使用字母、数字、方向键或功能键",
+  "composedText3": "{arg0} · {arg1}",
+  "@composedText3": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      },
+      "arg1": {
+        "type": "String"
+      }
+    }
+  },
+  "saving2": "正在保存…",
+  "listeningForKeyInput": "正在监听按键输入…",
+  "pressANewKeyCombinationPressEscTo": "请在键盘上按下新的组合键，按 Esc 取消",
+  "clearBinding": "清除绑定",
+  "couldNotLoadFavoriteTracksPleaseTryAgain": "喜欢列表加载失败，请重试",
+  "theOperationIsInProgressOrItsResult": "操作进行中或结果待确认，请先核对",
+  "operationSucceededButRefreshFailedRefreshThePage": "操作成功，刷新失败，请刷新页面",
+  "operationSucceeded": "操作成功",
+  "accountChangedThePreviousOperationSResultWas": "账号已切换，已忽略旧操作结果",
+  "resultPendingVerifyLaterItWillNotBe": "结果待确认，请稍后核对；不会自动重试",
+  "verifiedSuccessfullyButRefreshFailedRefreshThePage": "已核对成功，刷新失败，请刷新页面",
+  "theExpectedStateWasNotReachedAndRefresh": "核对未达到目标状态，刷新失败",
+  "verifiedOperationSucceeded": "已核对，操作成功",
+  "verifiedTheRemoteStateHasNotChangedYou": "已核对，远端未达到目标状态，可重新操作",
+  "resultPendingVerificationFailedVerifyLater": "结果待确认，核对失败，请稍后核对",
+  "noOperationsToVerify": "暂无可核对操作",
+  "onlyNeteaseCloudMusicAlbumsAreSupported": "仅支持网易云专辑",
+  "selectTracksFirst": "请先选择歌曲",
+  "skippedTracks": "{arg0}，跳过 {arg1} 首{arg2}歌曲",
+  "@skippedTracks": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      },
+      "arg1": {
+        "type": "String"
+      },
+      "arg2": {
+        "type": "String"
+      }
+    }
+  },
+  "description2": "简介",
+  "tags2": "标签",
+  "succeeded": "{arg0}成功",
+  "@succeeded": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "composedText4": "{arg0}。{arg1}",
+  "@composedText4": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      },
+      "arg1": {
+        "type": "String"
+      }
+    }
+  },
+  "operationFailedRefreshAndTryAgain": "操作失败，请刷新后重试",
+  "signInAgain2": "请重新登录",
+  "youDoNotHavePermissionToModifyThis": "没有操作此歌单的权限",
+  "playlistTracksAreNotFullyLoadedRetryLoading": "歌单成员未完整加载，请重试加载",
+  "thePlaylistChangedOrTracksAreMissingReload": "歌单已变化或成员不完整，请重新加载后排序",
+  "resultPending": "结果待确认",
+  "unexpectedServiceResponseResultPending": "服务响应异常，结果待确认",
+  "operationFailed": "操作失败（{arg0}）",
+  "@operationFailed": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "accountOperationFailedPleaseTryAgain": "账号操作失败，请重试",
+  "linuxKeyringLocked": "Linux 密钥环已锁定。解锁后重试；现有账号数据未更改。",
+  "linuxSecretServiceUnavailable": "Linux Secret Service 不可用，本次没有保存或删除凭据。",
+  "linuxCredentialSaveFailed": "Linux 密钥环未确认凭据已保存，现有账号数据已保留。",
+  "linuxCredentialDeleteFailed": "此设备已退出该账号，但密钥环未确认凭据已删除。解锁后重试；应用启动时不会恢复此账号。",
+  "couldNotRestorePlaybackHistoryPleaseTryAgain": "恢复播放记录失败，请重试",
+  "couldNotRestoreSignInPleaseTryAgain": "恢复登录失败，请稍后重试",
+  "theLocalMusicServiceIsStillStartingPlease": "本地音乐服务仍在启动，请稍后重试",
+  "theLocalMusicServiceCouldNotStartRestart": "本地音乐服务未能启动，请重启应用后重试",
+  "timedOutObtainingTheQrCodeCheckYour": "获取二维码超时，请检查网络后重试",
+  "couldNotConnectToTheMusicServiceCheck": "无法连接音乐服务，请检查网络后重试",
+  "tooManyRequestsWaitBeforeObtainingAnotherQr": "请求太频繁，请稍后再获取二维码",
+  "neteaseIsTemporarilyUnavailablePleaseTryAgainLater": "网易云服务暂时出错，请稍后重试",
+  "theMusicServiceReturnedAnInvalidQrCode": "音乐服务返回的二维码数据格式异常",
+  "couldNotObtainQrCodeTryAgainLater": "获取二维码失败，请稍后重试（{arg0}）",
+  "@couldNotObtainQrCodeTryAgainLater": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "theQrCodeExpiredRefreshAndTryAgain": "二维码已过期，请刷新重试",
+  "goodMorning": "早上好",
+  "goodAfternoon": "下午好",
+  "goodEvening": "晚上好",
+  "invalidNeteaseCloudMusicIdOrShareLink": "这不是有效的网易云音乐 ID 或分享链接",
+  "theLocalMusicServiceIsStartingPleaseTry": "本地音乐服务正在启动，请稍后再试",
+  "theLocalMusicServiceCouldNotStartRestart2": "本地音乐服务没能启动，播放需要它；重启应用或改用远端服务",
+  "theDeviceIdFileIsCorruptCheckThe": "本机设备标识文件已损坏，请检查应用数据后重试",
+  "couldNotReadOrSaveTheDeviceId": "无法读取或保存本机设备标识，请检查应用数据目录后重试",
+  "trackNotFoundCheckTheId": "没有找到这首歌，请确认 ID 是否正确",
+  "albumNotFoundCheckTheId": "没有找到这张专辑，请确认 ID 是否正确",
+  "artistNotFoundCheckTheId": "没有找到这位歌手，请确认 ID 是否正确",
+  "playlistNotFoundCheckTheId": "没有找到这个歌单，请确认 ID 是否正确",
+  "theTrackSPlaybackUrlIsUnavailableVip": "暂时拿不到这首歌的播放地址（可能需要 VIP 或有版权限制）",
+  "thisContentSourceDoesNotSupportThisOperation": "这个内容来源还不支持该操作",
+  "theMusicServiceReturnedUnrecognizedData": "音乐服务返回了无法识别的数据",
+  "musicServiceConnectionTimedOutPleaseTryAgain": "音乐服务连接超时，请稍后重试",
+  "couldNotConnectToTheMusicServiceCheck2": "连接不上音乐服务，请检查网络后重试",
+  "tooManyRequestsPleaseTryAgainLater": "请求太频繁了，请稍后再试",
+  "theMusicServiceIsTemporarilyUnavailablePleaseTry": "音乐服务暂时出错了，请稍后重试",
+  "theMusicServiceReturnedUnusuallyLargeDataReading": "音乐服务返回了异常大的数据，已停止读取",
+  "theMusicServiceRejectedThisRequestPleaseTry": "音乐服务拒绝了这次请求，请稍后再试",
+  "onlyAPreviewIsAvailableMembershipIsRequired": "这首歌只能试听片段，开通会员后可完整播放",
+  "signInToYourNeteaseAccountToContinue": "需要登录网易云账号才能继续",
+  "noCredentialsWereObtainedAfterPhoneConfirmationScan": "手机确认后未取得登录凭证，请重新扫码登录",
+  "signInStateChangedScanAgainToSign": "登录状态已变化，请重新扫码登录",
+  "noCredentialsFoundForThisAccountRemoteSign": "未找到当前账号的登录凭证，无法验证远端退出",
+  "neteaseDidNotConfirmSignOutPleaseTry": "网易云未确认退出登录，请稍后重试",
+  "neteaseStillAcceptsTheseCredentialsSignOutIs": "网易云仍接受当前登录凭证，退出未完成，请稍后重试",
+  "thisAccountDoesNotHavePermissionToPlay": "当前账号没有这首歌的播放权限",
+  "couldNotObtainTrackInformation": "获取歌曲信息失败（{arg0}）",
+  "@couldNotObtainTrackInformation": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "vipMembershipExpiredPlaybackStopped": "VIP 已到期，当前歌曲已停止",
+  "thisSegmentIsNotCachedConnectToThe": "此处尚未缓存，需要联网继续播放",
+  "signInToUseHeartbeatMode": "请登录后使用心动模式",
+  "noPlayableFavoriteTracksAddSomeFavoritesFirst": "喜欢的音乐中没有可用歌曲，请先收藏歌曲",
+  "noNewHeartbeatRecommendationsPleaseTryAgainLater": "暂时没有新的心动推荐，请稍后重试",
+  "couldNotLoadHeartbeatRecommendationsCheckYourNetwork": "心动推荐加载失败，请检查网络或稍后重试",
+  "severalHeartbeatTracksAreRestrictedByCopyrightRefresh": "心动推荐多首曲目版权受限，请稍后刷新",
+  "thisFileCannotBeDecodedAndWasSkipped": "这个文件无法解码，已跳过",
+  "couldNotOpenThisFile": "无法打开这个文件",
+  "thisFileContainsNoAudio": "这个文件里没有音频",
+  "decodingFailedTrackSkipped": "解码失败，已跳过",
+  "thisVersionHasNoDecoder": "这个版本没有解码器",
+  "thisFileDoesNotSupportSeeking": "这个文件不支持跳转",
+  "noAudioDeviceAvailable": "找不到可用的音频设备",
+  "couldNotOpenTheAudioDevice": "无法打开音频设备",
+  "couldNotStartThePlaybackThread": "播放线程启动失败",
+  "thePlayQueueIsEmpty": "播放队列是空的",
+  "thisItemIsNotInTheQueue": "队列里没有这一项",
+  "theQueueJustChangedPleaseTryAgain": "队列刚刚变了，请重试",
+  "youHaveReachedTheEndOfTheQueue": "已经到队列的尽头了",
+  "thisCommandHasAlreadyBeenExecuted": "这条指令已经被执行过了",
+  "thePlayerRejectedThisCommand": "播放器拒绝了这条指令",
+  "thePlayerDoesNotSupportThisOperationYet": "播放器还不支持这个操作",
+  "playerAndInterfaceVersionsDoNotMatch": "播放器版本和界面不匹配",
+  "thePlaybackSessionWasRecreated": "播放会话已经重建",
+  "thePlayerIsNotConnectedYet": "播放器还没有连接",
+  "thePlayerIsClosed": "播放器已经关闭",
+  "thePlayerDidNotRespondPleaseTryAgain": "播放器没有响应，请重试",
+  "thePlayerRejectedThisMessage": "播放器拒绝了这条消息",
+  "thePlayerHasBeenReleased": "播放器已经被释放",
+  "internalPlayerError": "播放器内部错误",
+  "preferenceUpdatedItWillTakeEffectLaterFor": "偏好已更新，当前这首稍后生效",
+  "playbackError": "播放出错了（{arg0}）",
+  "@playbackError": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "standardQuality": "标准音质",
+  "highQualityHq": "高音质(HQ)",
+  "losslessQualitySq": "无损音质(SQ)",
+  "highResolutionLosslessHiRes2": "高解析度无损 (Hi-Res)",
+  "usesLessDataAndPrefersStandardQualityReducing": "最省流量的档位，优先请求标准音质；网络较差时更不容易卡顿。",
+  "prefersHighQualityFallingBackToLowerAnd": "优先请求极高音质，拿不到时依次退到较高、标准音质。",
+  "prefersLosslessQualityFallingBackToHighLower": "优先请求无损音质，拿不到时依次退到极高、较高、标准音质。",
+  "prefersHighResolutionLosslessFallingBackToLossless": "优先请求高解析度无损；获取不到时退到无损音质。",
+  "yourChoiceRequestsAPreferredQualityButDoes": "选择表示优先请求对应档位，不保证当前歌曲以该档播放：曲目上限、账号权限与服务端可用性都可能让它降档。实际音质以下方正在播放的音源为准。",
+  "couldNotReadOrWriteLocalPlaybackHistory": "本地播放记录读写失败，请重试",
+  "colorMustUseRrggbbFormat": "颜色必须为 #RRGGBB",
+  "aThemeRequiresNineOpaqueSemanticColors": "主题需要九种不透明语义颜色",
+  "invalidThemeFormatOrVersion": "主题格式或版本无效",
+  "aThemeMustContainNineSemanticColors": "主题必须包含九种语义颜色",
+  "unknownArtist": "未知艺术家",
+  "loadingTrackInformation": "歌曲信息待加载",
+  "unknownAlbum": "未知专辑",
+  "neteaseRecommendations": "网易云推荐",
+  "creator3": "创建者: {arg0}",
+  "@creator3": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "yourDailyMix": "每日私人订制",
+  "communityPicks": "网友精选碟",
+  "communityCurated": "网友精选",
+  "recentlyPlayedPlaylists": "最近播放歌单",
+  "charts": "排行榜",
+  "officialChart": "官方榜单",
+  "unknownPlaylist": "未知歌单",
+  "neteasePlaylist": "网易云歌单",
+  "unknownArtist2": "未知歌手",
+  "composedText5": "{arg0}",
+  "@composedText5": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "track": "单曲",
+  "neteaseUser": "网易云用户",
+  "unknownResource": "未知资源",
+  "languageSettings": "语言",
+  "languageFollowSystem": "跟随系统",
+  "languageSaveFailed": "语言设置未保存，下次启动将使用之前的设置。",
+  "languageSaving": "正在保存语言设置…",
+  "trayShow": "显示 Fideflow",
+  "hotkeyOccupied": "快捷键已被占用或不受支持",
+  "hotkeyLayoutChanged": "键盘布局变化后快捷键被占用，请重新启用全局快捷键",
+  "hotkeyRegistrationFailed": "全局快捷键注册失败，请重新启用",
+  "unsupportedAction": "不支持此操作",
+  "unsupportedGlobalShortcut": "不支持此全局快捷键",
+  "duplicateShortcut": "快捷键重复",
+  "themeDeletionFallback": "当前外观将切换到 MaterialDark。",
+  "playlistCreatedPrefix": "歌单已创建；",
+  "newPlaylistKeptPrefix": "新歌单已保留；",
+  "networkError": "网络异常",
+  "vipMembershipRequired": "需要 VIP",
+  "unknownTrack": "未知曲目",
+  "likeTracks": "喜欢歌曲",
+  "playlistActions": "歌单操作",
+  "desktopPreview": "预览版",
+  "instanceLockFailed": "无法取得播放器实例锁。",
+  "keyboardTab": "制表键",
+  "keyboardHome": "行首",
+  "keyboardEnd": "行尾",
+  "keyboardPageUp": "上一页",
+  "keyboardPageDown": "下一页",
+  "keyboardDelete": "删除键",
+  "invalidModifier": "无效的修饰键",
+  "invalidShortcutConfiguration": "快捷键配置无效",
+  "missingBindings": "快捷键绑定缺失",
+  "conflictingShortcuts": "快捷键冲突",
+  "keyboardUnsupportedKey": "不支持此按键",
+  "tracksAlreadyPresent": "已存在",
+  "tracksNotPresent": "不存在",
+  "remoteInformationRefreshed": "已刷新远端实际信息，请修正失败项后重试",
+  "menuEdit": "编辑",
+  "menuView": "显示",
+  "menuWindow": "窗口",
+  "menuAbout": "关于 Fideflow",
+  "menuHide": "隐藏 Fideflow",
+  "menuHideOthers": "隐藏其他应用",
+  "menuShowAll": "显示全部",
+  "menuQuit": "退出 Fideflow",
+  "menuUndo": "撤销",
+  "menuRedo": "重做",
+  "menuCut": "剪切",
+  "menuCopy": "复制",
+  "menuPaste": "粘贴",
+  "menuPasteStyle": "粘贴并匹配样式",
+  "menuDelete": "删除",
+  "menuSelectAll": "全选",
+  "menuFullScreen": "全屏",
+  "menuCloseWindow": "关闭窗口",
+  "menuMinimize": "最小化",
+  "menuZoom": "缩放",
+  "menuBringAllFront": "前置全部窗口",
+  "languageNameEnglish": "English",
+  "languageNameSimplified": "简体中文",
+  "debugExportCookie": "导出 Cookie",
+  "debugCookieCopied": "Cookie 已复制到剪贴板",
+  "debugCookieExportFailed": "导出 Cookie 失败，请重新登录后重试",
+  "clickToSignIn": "点击登录",
+  "collapseSidebar": "收起导航栏",
+  "expandSidebar": "展开导航栏",
+  "playlistDetails": "歌单详情",
+  "albumDetails": "专辑详情",
+  "artistDetails": "歌手详情",
+  "themeToneOledBlack": "OLED 纯黑",
+  "themeToneCoolDark": "深灰冷调",
+  "themeToneWarmNight": "暖色暗夜",
+  "themeTonePureWhite": "清爽纯白",
+  "themeToneWarmWhite": "护眼米白",
+  "themeBaseToneStep": "第 1 步：选基调模式",
+  "themeAccentStep": "第 2 步：选强调色 (Accent)",
+  "themeAdvancedTuning": "高级自定义 / 精细微调",
+  "themeCollapseSlots": "收起",
+  "themeExpandSlots": "展开 9 色槽",
+  "themeSlotOverrideHelp": "可单独指定某个色槽（微调后保留，不受基调推导影响）：",
+  "dailyStartWithSong": "从「{title}」听起",
+  "dailyTasteSubtitle": "根据你的音乐口味生成",
+  "heartbeatExploreSubtitle": "从红心歌曲开启漫游",
+  "@dailyStartWithSong": {
+    "placeholders": {
+      "title": {
+        "type": "String"
+      }
+    }
+  },
+  "mobilePlaybackStartupFailed": "无法初始化音乐播放",
+  "resamplingEnabled": "开启重采样",
+  "resamplingTargetSampleRate": "目标采样率",
+  "resamplingDescription": "仅在歌曲采样率与目标不同时重采样，输出使用 float32 PCM。共享模式下系统可能进一步适配设备采样率。",
+  "resamplingExclusiveDescription": "独占模式使用目标采样率；设备不支持时停止播放并提示错误。",
+  "resamplingAutomaticDescription": "关闭时，共享播放跟随系统采样率；独占播放按歌曲采样率协商。所选目标采样率会保留。",
+  "resamplingAutomaticSharedDescription": "关闭时，播放跟随系统当前采样率。所选目标采样率会保留。",
+  "phoneSignIn": "手机号登录",
+  "qrSignIn": "扫码登录",
+  "phoneNumber": "手机号",
+  "countryCallingCode": "国际区号",
+  "smsCode": "短信验证码",
+  "sendLoginCode": "获取验证码",
+  "resendLoginCode": "{seconds} 秒后重发",
+  "submitPhoneLogin": "登录",
+  "phoneInvalid": "请输入有效的国际区号和手机号",
+  "phoneNotRegistered": "该手机号尚未注册，请先在网易云音乐注册",
+  "codeInvalid": "验证码不正确，请检查后重试",
+  "codeExpired": "验证码已过期，请重新获取",
+  "loginVerificationRequired": "需要额外安全验证，请重试或使用扫码登录",
+  "smsSendFailed": "验证码发送失败，请稍后重试",
+  "phoneLoginFailed": "手机号登录失败，请重试或使用扫码登录",
+  "loginRateLimited": "请求过于频繁，请稍后重试",
+  "@resendLoginCode": {
+    "placeholders": {
+      "seconds": {
+        "type": "int"
+      }
+    }
+  }
+}

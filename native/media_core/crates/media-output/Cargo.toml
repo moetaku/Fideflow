@@ -1,0 +1,13 @@
+[package]
+name = "fideflow-media-output"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+publish = false
+build = "build.rs"
+
+[lib]
+path = "src/lib.rs"
+
+[lints]
+workspace = true

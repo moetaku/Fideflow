@@ -1,0 +1,4 @@
+Official source: https://github.com/adobe-fonts/source-han-sans
+Commit: a4f7cf94edfb9d7ffbdfc4841de276358bd7e0f2
+Files: SubsetOTF/CN/SourceHanSansCN-Regular.otf, SourceHanSansCN-Medium.otf and SourceHanSansCN-Bold.otf
+Original unmodified region-specific subset OTFs.

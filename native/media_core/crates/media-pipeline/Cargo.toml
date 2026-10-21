@@ -1,0 +1,11 @@
+[package]
+name = "fideflow-media-pipeline"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+
+[lib]
+name = "fideflow_media_pipeline"
+
+[lints]
+workspace = true

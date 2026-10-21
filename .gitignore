@@ -1,0 +1,49 @@
+# Dart / Flutter
+.dart_tool/
+.flutter-plugins-dependencies
+.pub-cache/
+build/
+coverage/
+
+# Rust
+target/
+
+# Local data produced by tests, probes and verification runs.
+#
+# Unit tests keep their scratch data in the operating system's temp directory
+# and clean it up themselves (`Directory.systemTemp`, `std::env::temp_dir()`),
+# so a test run leaves nothing behind. The command-line tools under
+# `tooling/native/checks/` write here by default instead, because their output is
+# meant to be looked at: a capture, a probe log, a rendered QR. Keep them out of
+# version control; anything worth keeping (a fixture, a report) is copied or
+# written with an explicit `--out` into the tree on purpose.
+.local/
+
+# Editors and operating systems
+.idea/
+.vscode/
+*.iml
+.DS_Store
+Thumbs.db
+
+# Agent/IDE client state (machine-local, never project source)
+.freebuff/
+.codebuddy/
+
+# Local configuration and secrets
+.env
+.env.*
+!.env.example
+
+# Python bytecode
+__pycache__/
+*.pyc
+# Widget Preview related
+.widget_preview/
+
+# Signing material (provided locally or by Actions Secrets)
+*.jks
+*.keystore
+*.p12
+*.mobileprovision
+key.properties

@@ -1,0 +1,14 @@
+include: package:lints/recommended.yaml
+
+analyzer:
+  exclude:
+    - "**/.dart_tool/**"
+    - "**/build/**"
+
+linter:
+  rules:
+    avoid_print: true
+    directives_ordering: true
+    prefer_final_locals: true
+    unawaited_futures: true
+

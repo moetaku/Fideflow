@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- audio_service resolves control icons by name at runtime. Keep them when
+     R8/resource shrinking is enabled so release MediaSession updates succeed. -->
+<resources xmlns:tools="http://schemas.android.com/tools"
+    tools:keep="@drawable/audio_service_*" />

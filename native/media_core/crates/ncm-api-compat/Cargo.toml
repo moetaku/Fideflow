@@ -1,0 +1,27 @@
+[package]
+name = "fideflow-ncm-api-compat"
+version.workspace = true
+edition.workspace = true
+license = "Apache-2.0"
+
+[dependencies]
+ncm-api-rs = { path = "../../vendor/ncm-api-rs", default-features = false }
+reqwest = { version = "0.13", default-features = false, features = ["json", "form", "query", "socks", "rustls-no-provider"] }
+rustls = { version = "0.23", default-features = false, features = ["ring", "std", "tls12"] }
+webpki-roots = "1"
+tokio = { version = "1", features = ["rt", "sync"] }
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+serde_urlencoded = "0.7"
+thiserror = "2"
+regex-lite = "0.1"
+urlencoding = "2"
+rand = "0.10"
+chrono = "0.4"
+hex = "0.4"
+base64 = "0.22"
+md-5 = "0.11"
+qrcode = { version = "0.14.1", default-features = false, features = ["svg"] }
+
+[dev-dependencies]
+tokio = { version = "1", features = ["full", "test-util"] }

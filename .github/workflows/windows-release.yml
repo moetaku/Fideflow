@@ -1,0 +1,60 @@
+name: Windows 单平台打包
+on:
+  workflow_dispatch:
+  workflow_call:
+permissions:
+  contents: read
+concurrency:
+  group: windows-release-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: false
+jobs:
+  windows:
+    runs-on: windows-2022
+    timeout-minutes: 180
+    defaults:
+      run:
+        shell: powershell
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: 读取并校验版本
+        id: version
+        shell: bash
+        run: |
+          set -euo pipefail
+          version=$(sed -n 's/^version:[[:space:]]*//p' apps/fideflow_flutter/pubspec.yaml | tr -d '\r')
+          [[ "$version" =~ ^[0-9]+\.[0-9]+\.[0-9]+\+[0-9]+$ ]]
+          if [ "$GITHUB_REF_TYPE" = tag ]; then
+            test "$GITHUB_REF_NAME" = "v${version%%+*}"
+          fi
+          echo "version=$version" >> "$GITHUB_OUTPUT"
+      - uses: subosito/flutter-action@v2
+        with:
+          flutter-version: '3.47.5'
+          channel: stable
+      - name: 准备依赖
+        run: |
+          choco install nasm -y --no-progress
+          if ($LASTEXITCODE -ne 0) { throw 'NASM installation failed' }
+          & C:/msys64/usr/bin/bash.exe -lc 'pacman -S --needed --noconfirm make diffutils pkgconf'
+          if ($LASTEXITCODE -ne 0) { throw 'MSYS2 installation failed' }
+          ./tooling/test_bootstrap.ps1
+          ./tooling/bootstrap.ps1
+          ./tooling/release/windows/tools.ps1 -Install
+      - name: 构建与打包
+        run: |
+          ./tooling/native/windows/build.ps1
+          ./tooling/release/windows/package.ps1
+      - name: 整理 Release 文件
+        env:
+          VERSION: ${{ steps.version.outputs.version }}
+        run: |
+          python tooling/release/github_assets.py --source "build/release/windows/$env:VERSION/x64" --output build/github-assets/windows --platform windows --arch x64 --revision $env:GITHUB_SHA --version $env:VERSION
+          if ($LASTEXITCODE -ne 0) { throw 'Asset staging failed' }
+      - uses: actions/upload-artifact@v4
+        with:
+          name: Fideflow-windows-x86_64-${{ steps.version.outputs.version }}
+          path: build/github-assets/windows/*
+          if-no-files-found: error
+          retention-days: 14

@@ -1,0 +1,60 @@
+name: macOS 单平台打包
+on:
+  workflow_dispatch:
+  workflow_call:
+permissions:
+  contents: read
+concurrency:
+  group: macos-release-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: false
+jobs:
+  macos:
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - arch: arm64
+            runner: macos-15
+          - arch: x86_64
+            runner: macos-15-intel
+    runs-on: ${{ matrix.runner }}
+    timeout-minutes: 180
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: 读取并校验版本
+        id: version
+        shell: bash
+        run: |
+          set -euo pipefail
+          version=$(sed -n 's/^version:[[:space:]]*//p' apps/fideflow_flutter/pubspec.yaml | tr -d '\r')
+          [[ "$version" =~ ^[0-9]+\.[0-9]+\.[0-9]+\+[0-9]+$ ]]
+          if [ "$GITHUB_REF_TYPE" = tag ]; then
+            test "$GITHUB_REF_NAME" = "v${version%%+*}"
+          fi
+          echo "version=$version" >> "$GITHUB_OUTPUT"
+      - uses: subosito/flutter-action@v2
+        with:
+          flutter-version: '3.47.5'
+          channel: stable
+      - name: 准备依赖
+        run: |
+          brew install cmake nasm pkg-config autoconf automake libtool
+          rustup target add aarch64-apple-darwin x86_64-apple-darwin
+          flutter pub get --enforce-lockfile
+      - name: 打包
+        run: tooling/release/macos/package.sh --arch '${{ matrix.arch }}'
+      - name: 整理 Release 文件
+        env:
+          VERSION: ${{ steps.version.outputs.version }}
+          ARCH: ${{ matrix.arch }}
+        run: |
+          python3 tooling/release/github_assets.py --source "build/release/macos/$VERSION/$ARCH" \
+            --output build/github-assets/macos --platform macos --arch "$ARCH" --revision "$GITHUB_SHA" --version "$VERSION"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: Fideflow-macos-${{ matrix.arch }}-${{ steps.version.outputs.version }}
+          path: build/github-assets/macos/*
+          if-no-files-found: error
+          retention-days: 14

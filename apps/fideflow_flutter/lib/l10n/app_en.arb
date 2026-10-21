@@ -1,0 +1,1393 @@
+{
+  "windowMinimize": "Minimize",
+  "windowMaximize": "Maximize",
+  "windowRestore": "Restore",
+  "@@locale": "en",
+  "fideflowTheme": "Fideflow theme",
+  "theThemeFileIsTooLarge": "The theme file is too large",
+  "theSettingsDirectoryIsUnavailableAppearanceChangesApply": "The settings directory is unavailable. Appearance changes apply only to this session; export themes to back them up.",
+  "themeNamesMustContain140Characters": "Theme names must contain 1–40 characters",
+  "aThemeWithThisNameAlreadyExists": "A theme with this name already exists",
+  "savingPleaseWait": "Saving, please wait",
+  "couldNotSaveAppearancePleaseTryAgain": "Could not save appearance. Please try again",
+  "themeNotFound": "Theme not found",
+  "presetThemesCannotBeModified": "Preset themes cannot be modified",
+  "presetThemesCannotBeDeleted": "Preset themes cannot be deleted",
+  "demoAccount": "Demo account {arg0}",
+  "@demoAccount": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "couldNotSavePleaseTryAgain": "Could not save. Please try again",
+  "closeMainWindow": "Close main window",
+  "closingTheWindowHidesItInTheSystem": "Closing the window hides it in the system tray and keeps music playing. Quitting Fideflow stops playback.",
+  "musicKeepsPlayingAfterTheWindowClosesClick": "Music keeps playing after the window closes. Click the Dock icon to reopen it. Quitting Fideflow stops playback.",
+  "theSystemTrayIsUnavailableQuitFideflowOr": "The system tray is unavailable. Quit Fideflow or cancel.",
+  "doNotAskAgain": "Do not ask again",
+  "cancel": "Cancel",
+  "closeWindow": "Close window",
+  "quitFideflow": "Quit Fideflow",
+  "whenClosingTheMainWindow": "When closing the main window",
+  "minimizeToSystemTray": "Minimize to system tray",
+  "closeWindowAndKeepPlaying": "Close window and keep playing",
+  "askEveryTime": "Ask every time",
+  "all": "All",
+  "couldNotInitializeSystemMediaControls": "Could not initialize system media controls",
+  "globalShortcutsAreAvailableOnlyInSupportedNative": "Global shortcuts are available only in supported native desktop apps",
+  "couldNotSaveShortcutsPleaseTryAgain": "Could not save shortcuts. Please try again",
+  "couldNotRestoreGlobalShortcutsEnableThemAgain": "Could not restore global shortcuts. Enable them again",
+  "playbackFailedPleaseTryAgain": "Playback failed. Please try again",
+  "onlyNeteaseCloudMusicTracksAreSupported": "Only NetEase Cloud Music tracks are supported",
+  "signInThroughAccountSettingsFirst": "Sign in through account settings first",
+  "couldNotLoadFavoritesPleaseTryAgain": "Could not load favorites. Please try again",
+  "couldNotUpdateFavoritesPleaseTryAgain": "Could not update favorites. Please try again",
+  "couldNotSyncSystemMediaInformation": "Could not sync system media information",
+  "unknownAudioQuality": "Unknown audio quality",
+  "playPause": "Play / Pause",
+  "previousTrack": "Previous track",
+  "nextTrack": "Next track",
+  "volumeUp": "Volume up",
+  "volumeDown": "Volume down",
+  "likeUnlike": "Like / Unlike",
+  "enter": "Enter",
+  "backspace": "Backspace",
+  "space": "Space",
+  "unsupportedKey": "{arg0}: unsupported key",
+  "@unsupportedKey": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "duplicateShortcut2": "{arg0}: duplicate shortcut",
+  "@duplicateShortcut2": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "globalShortcutsMustIncludeOrCtrl": "Global shortcuts must include ⌘ or Ctrl",
+  "thisCombinationIsAlreadyUsedForForwardBack": "This combination is already used for forward / back navigation",
+  "signInToNeteaseWithAQrCode": "Sign in to NetEase with a QR code",
+  "generatingSignInQrCode": "Generating sign-in QR code...",
+  "neteaseSignInQrCode": "NetEase sign-in QR code",
+  "scanWithTheNeteaseCloudMusicAppTo": "Scan with the NetEase Cloud Music app to sign in",
+  "theQrCodeExpiresIn2Minutes": "The QR code expires in 2 minutes",
+  "qrCodeScanned": "QR code scanned",
+  "confirmOnYourPhoneToFinishSigningIn": "Confirm on your phone to finish signing in",
+  "signedIn": "Signed in!",
+  "signInFailed": "Sign-in failed",
+  "getANewQrCode": "Get a new QR code",
+  "albumLinkCopied": "Album link copied",
+  "album": "Album",
+  "tracks": "{arg0, plural, one{1 track} other{{arg0} tracks}}{arg1}",
+  "@tracks": {
+    "placeholders": {
+      "arg0": {
+        "type": "int"
+      },
+      "arg1": {
+        "type": "String"
+      }
+    }
+  },
+  "playLoadedTracks": "Play {arg0, plural, one{1 loaded track} other{{arg0} loaded tracks}}",
+  "@playLoadedTracks": {
+    "placeholders": {
+      "arg0": {
+        "type": "int"
+      }
+    }
+  },
+  "playAll": "Play all",
+  "sortsOnlyTheTracksCurrentlyLoaded": "(Sorts only the tracks currently loaded)",
+  "shareAlbumLink": "Share album link",
+  "noPlayableTracksInThisAlbum": "No playable tracks in this album",
+  "artist": "Artist",
+  "back": "Back",
+  "tracksAlbums": "{arg0, plural, one{1 track} other{{arg0} tracks}} · {arg1, plural, one{1 album} other{{arg1} albums}}",
+  "@tracksAlbums": {
+    "placeholders": {
+      "arg0": {
+        "type": "int"
+      },
+      "arg1": {
+        "type": "int"
+      }
+    }
+  },
+  "popularTracks": "Popular tracks ({arg0})",
+  "@popularTracks": {
+    "placeholders": {
+      "arg0": {
+        "type": "int"
+      }
+    }
+  },
+  "noPopularTracksForThisArtist": "No popular tracks for this artist",
+  "unlike": "Unlike",
+  "favoriteStatusUnknownClickToLoad": "Favorite status unknown. Click to load",
+  "like": "Like",
+  "likeMusic": "Like music",
+  "signInToSyncYourFavoriteMusic": "Sign in to sync your favorite music.",
+  "ok": "OK",
+  "addToPlaylist": "Add to playlist",
+  "signInToAddMusicToPlaylists": "Sign in to add music to playlists.",
+  "language": "Language",
+  "genre": "Genre",
+  "activity": "Activity",
+  "mood": "Mood",
+  "theme": "Theme",
+  "chinese": "Chinese",
+  "western": "Western",
+  "japanese": "Japanese",
+  "korean": "Korean",
+  "cantonese": "Cantonese",
+  "otherLanguages": "Other languages",
+  "pop": "Pop",
+  "rock": "Rock",
+  "folk": "Folk",
+  "electronic": "Electronic",
+  "dance": "Dance",
+  "rap": "Rap",
+  "easyListening": "Easy listening",
+  "jazz": "Jazz",
+  "country": "Country",
+  "classical": "Classical",
+  "traditional": "Traditional",
+  "britpop": "Britpop",
+  "metal": "Metal",
+  "punk": "Punk",
+  "blues": "Blues",
+  "reggae": "Reggae",
+  "worldMusic": "World music",
+  "latin": "Latin",
+  "chineseTraditionalStyle": "Chinese traditional style",
+  "postRock": "Post-rock",
+  "morning": "Morning",
+  "night": "Night",
+  "study": "Study",
+  "work": "Work",
+  "nap": "Nap",
+  "afternoonTea": "Afternoon tea",
+  "subway": "Subway",
+  "driving": "Driving",
+  "workout": "Workout",
+  "travel": "Travel",
+  "walking": "Walking",
+  "bar": "Bar",
+  "nostalgic": "Nostalgic",
+  "fresh": "Fresh",
+  "romantic": "Romantic",
+  "melancholic": "Melancholic",
+  "healing": "Healing",
+  "relaxing": "Relaxing",
+  "lonely": "Lonely",
+  "moving": "Moving",
+  "exciting": "Exciting",
+  "happy": "Happy",
+  "quiet": "Quiet",
+  "longing": "Longing",
+  "varietyShows": "Variety shows",
+  "soundtracks": "Soundtracks",
+  "children": "Children",
+  "school": "School",
+  "games": "Games",
+  "bornInThe70S": "Born in the 70s",
+  "bornInThe80S": "Born in the 80s",
+  "bornInThe90S": "Born in the 90s",
+  "internetSongs": "Internet songs",
+  "classics": "Classics",
+  "covers": "Covers",
+  "guitar": "Guitar",
+  "piano": "Piano",
+  "instrumental": "Instrumental",
+  "couldNotLoadTagsRetryOrKeepThe": "Could not load tags. Retry or keep the original tags",
+  "theAccountHasChangedCloseAndReopenThis": "The account has changed. Close and reopen this dialog",
+  "playlistNameCannotBeEmpty": "Playlist name cannot be empty",
+  "composedText": "{arg0}{arg1}",
+  "@composedText": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      },
+      "arg1": {
+        "type": "String"
+      }
+    }
+  },
+  "createPlaylist": "Create playlist",
+  "editPlaylistInformation": "Edit playlist information",
+  "name": "Name",
+  "enterPlaylistName": "Enter playlist name",
+  "descriptionCanBeCleared": "Description (can be cleared)",
+  "tellUsAboutThisPlaylist": "Tell us about this playlist",
+  "privatePlaylist": "Private playlist",
+  "tags": "Tags:",
+  "choose": "Choose...",
+  "editTags": "Edit tags",
+  "keepPlaylistAndClose": "Keep playlist and close",
+  "saving": "Saving…",
+  "save": "Save",
+  "selectUpTo3Tags": "Select up to 3 tags",
+  "official": "Official",
+  "noTags": "No tags",
+  "text3TagsSelected": "{arg0}/3 tags selected",
+  "@text3TagsSelected": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "theAccountHasChangedReopenThisDialog": "The account has changed. Reopen this dialog",
+  "addTracksToAPlaylist": "Add {arg0, plural, one{1 track} other{{arg0} tracks}} to a playlist",
+  "@addTracksToAPlaylist": {
+    "placeholders": {
+      "arg0": {
+        "type": "int"
+      }
+    }
+  },
+  "searchYourPlaylists": "Search your playlists",
+  "couldNotLoadPlaylistsRetry": "Could not load playlists. Retry",
+  "onlyLoadedPlaylistsYouCreatedAreShownRefresh": "Only loaded playlists you created are shown. Refresh to load more",
+  "tracks2": "{arg0, plural, =0{No tracks} one{1 track} other{{arg0} tracks}}",
+  "@tracks2": {
+    "placeholders": {
+      "arg0": {
+        "type": "int"
+      }
+    }
+  },
+  "refresh": "Refresh",
+  "createPlaylistAndAddTracks": "Create playlist and add tracks",
+  "unsubscribe": "Unsubscribe",
+  "checkSubscriptionStatus": "Check subscription status",
+  "subscribeToPlaylist": "Subscribe to playlist",
+  "reorder": "Reorder",
+  "loadAllTracksToReorder": "Load all tracks to reorder",
+  "loadingSubscriptions": "Loading subscriptions",
+  "retryLoadingSubscriptions": "Retry loading subscriptions",
+  "subscribed": "Subscribed",
+  "subscribeToAlbum": "Subscribe to album",
+  "editInformation": "Edit information",
+  "deletePlaylist": "Delete playlist",
+  "deleteThisPlaylist": "Delete this playlist?",
+  "tracksThisCannotBeUndone": "“{arg0}”, {arg1, plural, one{1 track} other{{arg1} tracks}}. This cannot be undone.",
+  "@tracksThisCannotBeUndone": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      },
+      "arg1": {
+        "type": "int"
+      }
+    }
+  },
+  "delete": "Delete",
+  "theAccountHasChangedConfirmDeletionAgain": "The account has changed. Confirm deletion again",
+  "deleted": "Deleted",
+  "reorderTracks": "Reorder tracks",
+  "moveUp": "Move up",
+  "moveDown": "Move down",
+  "saveOrder": "Save order",
+  "resultIsPendingClickToVerify": "{arg0} result is pending. Click to verify",
+  "@resultIsPendingClickToVerify": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "verifyOperationResult": "Verify operation result",
+  "hundredMillion": "{arg0} hundred million",
+  "@hundredMillion": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "tenThousand": "{arg0} ten thousand",
+  "@tenThousand": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "playlistLinkCopied": "Playlist link copied",
+  "thisPlaylistWasDeleted": "This playlist was deleted",
+  "myFavoriteMusic": "My favorite music",
+  "localPlaybackHistory": "Local playback history",
+  "playlist": "Playlist",
+  "created": "Created {arg0}-{arg1}-{arg2}",
+  "@created": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      },
+      "arg1": {
+        "type": "String"
+      },
+      "arg2": {
+        "type": "String"
+      }
+    }
+  },
+  "tracksPartiallyLoaded": "{arg0} / {arg1} tracks (partially loaded) · {arg2}",
+  "@tracksPartiallyLoaded": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      },
+      "arg1": {
+        "type": "String"
+      },
+      "arg2": {
+        "type": "String"
+      }
+    }
+  },
+  "tracks3": "{arg0, plural, one{1 track} other{{arg0} tracks}} · {arg1}",
+  "@tracks3": {
+    "placeholders": {
+      "arg0": {
+        "type": "int"
+      },
+      "arg1": {
+        "type": "String"
+      }
+    }
+  },
+  "playedTimes": "{arg0, plural, one{Played once} other{Played {arg0} times}}",
+  "@playedTimes": {
+    "placeholders": {
+      "arg0": {
+        "type": "int",
+        "format": "compact"
+      }
+    }
+  },
+  "subscriptions": "{arg0, plural, one{1 subscription} other{{arg0} subscriptions}}",
+  "@subscriptions": {
+    "placeholders": {
+      "arg0": {
+        "type": "int",
+        "format": "compact"
+      }
+    }
+  },
+  "retryLoading": "Retry loading",
+  "batchActions": "Batch actions",
+  "sharePlaylistLink": "Share playlist link",
+  "someTracksCouldNotBeLoadedShowingThe": "Some tracks could not be loaded. Showing the first {arg0}",
+  "@someTracksCouldNotBeLoadedShowingThe": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "retry": "Retry",
+  "selected": "{arg0} selected",
+  "@selected": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "play": "Play",
+  "addToPlayQueue": "Add to play queue",
+  "subscribe": "Subscribe",
+  "done": "Done",
+  "loadingTracks": "Loading tracks...",
+  "noPlayableTracksInThisPlaylist": "No playable tracks in this playlist",
+  "privatePlaylistOrAccessDenied": "Private playlist or access denied",
+  "theCreatorMadeThisPlaylistPrivateOrLimited": "The creator made this playlist private or limited access to specific accounts",
+  "noDetailsAvailableForThis": "No details available for this {arg0}",
+  "@noDetailsAvailableForThis": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "couldNotLoad": "Could not load {arg0}",
+  "@couldNotLoad": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "default2": "Default",
+  "trackName": "Track name",
+  "duration": "Duration",
+  "sort": "Sort",
+  "selectAllTracks": "Select all tracks",
+  "title": "Title",
+  "playedAt": "Played at",
+  "trackLinkCopied": "Track link copied",
+  "select": "Select {arg0}",
+  "@select": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "moreActions": "More actions",
+  "playNext": "Play next",
+  "addToQueue": "Add to queue",
+  "addToPlaylist2": "Add to playlist",
+  "removeFromPlaylist": "Remove from playlist",
+  "deletePlaybackHistory": "Delete playback history",
+  "copyTrackLink": "Copy track link",
+  "free": "Free",
+  "preview": "Preview",
+  "unavailable": "Unavailable",
+  "month": "Month {arg0}",
+  "@month": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "dailyTrackRecommendations": "Daily track recommendations",
+  "basedOnYourTasteUpdatedDailyAt6": "Based on your taste, updated daily at 6:00",
+  "couldNotLoadRecommendedTracks": "Could not load recommended tracks: {arg0}",
+  "@couldNotLoadRecommendedTracks": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "couldNotLoadYourPlaylistsPleaseTryAgain": "Could not load your playlists. Please try again",
+  "noPlaylists": "No playlists",
+  "tracks4": "{arg0, plural, =0{No tracks} one{1 track} other{{arg0} tracks}}",
+  "@tracks4": {
+    "placeholders": {
+      "arg0": {
+        "type": "int"
+      }
+    }
+  },
+  "loadTracks": "Load tracks",
+  "you": "You",
+  "savedFavoriteTracks": "{arg0} saved {arg1, plural, one{1 favorite track} other{{arg1} favorite tracks}}",
+  "@savedFavoriteTracks": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      },
+      "arg1": {
+        "type": "int"
+      }
+    }
+  },
+  "playAll2": "Play all ({arg0})",
+  "@playAll2": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "noFavoriteTracks": "No favorite tracks",
+  "signInToNeteaseCloudMusic": "Sign in to NetEase Cloud Music",
+  "listenToYourFavoriteTracks": "Listen to your favorite tracks",
+  "scanToSignIn": "Click to sign in",
+  "heartbeatModeIsActiveClickToExit": "Heartbeat mode is active. Click to exit",
+  "loadingHeartbeatRecommendations": "Loading Heartbeat recommendations...",
+  "startHeartbeatModeEndlessRecommendationsBasedOnYour": "Start Heartbeat mode: endless recommendations based on your favorites",
+  "starting": "Starting...",
+  "heartbeatModeActive": "Heartbeat mode active",
+  "startHeartbeatMode": "Start Heartbeat mode",
+  "exitHeartbeatMode": "Exit Heartbeat mode?",
+  "addingTracksManuallyWillExitHeartbeatModeContinue": "Adding tracks manually will exit Heartbeat mode. Continue?",
+  "exitAndAdd": "Exit and add",
+  "favoriteMusic": "Favorite music",
+  "onlineMusic": "Online music",
+  "recommendations": "Recommendations",
+  "featuredPlaylists": "Featured playlists",
+  "myMusic": "My music",
+  "recentlyPlayed": "Recently played",
+  "couldNotRestoreSignIn": "Could not restore sign-in",
+  "neteaseVipMember": "NetEase VIP member",
+  "neteaseCloudMusicUser": "NetEase Cloud Music user",
+  "accountActions": "Account actions",
+  "signOut": "Sign out",
+  "couldNotSignOutPleaseTryAgainLater": "Could not sign out. Please try again later",
+  "restoringSignIn": "Restoring sign-in",
+  "couldNotRestoreSignIn2": "Could not restore sign-in",
+  "pleaseWait": "Please wait",
+  "yourCredentialsHaveBeenKeptClickToRetry": "Your credentials have been kept. Click to retry",
+  "localGuest": "Local guest",
+  "signInToSyncPlaylists": "Sign in to sync playlists",
+  "signInToSyncPlaylistsAndListeningHistory": "Sign in to NetEase Cloud Music\nSync playlists and listening history",
+  "albumDetailsAreUnavailableInThisEnvironment": "Album details are unavailable in this environment",
+  "artistDetailsAreUnavailableInThisEnvironment": "Artist details are unavailable in this environment",
+  "back2": "Back",
+  "forward": "Forward",
+  "searchMusicArtistsAlbums": "Search music, artists, albums...",
+  "settings": "Settings",
+  "couldNotLoad2": "Could not load",
+  "noMusicToPlayYet": "No music to play yet",
+  "searchForATrackOrSignInTo": "Search for a track or sign in to NetEase Cloud Music to see your playlists.",
+  "playlistsICreated": "Playlists I created",
+  "playlistsISubscribedTo": "Playlists I subscribed to",
+  "albumsISubscribedTo": "Albums I subscribed to",
+  "syncYourFavoritesAndPlaybackHistoryAcrossDevices": "Sync your favorites and playback history across devices",
+  "signInToSeePlaylistsYouCreated": "Sign in to see playlists you created",
+  "signInToSeeYourSubscribedPlaylists": "Sign in to see your subscribed playlists",
+  "signInToSeeYourSubscribedAlbums": "Sign in to see your subscribed albums",
+  "reload": "Reload",
+  "playlistsArePartiallyLoadedShowingPlaylists": "Playlists are partially loaded. Showing {arg0, plural, one{1 playlist} other{{arg0} playlists}}",
+  "@playlistsArePartiallyLoadedShowingPlaylists": {
+    "placeholders": {
+      "arg0": {
+        "type": "int"
+      }
+    }
+  },
+  "couldNotUpdateYourPlaylistsShowingPreviouslyLoaded": "Could not update your playlists. Showing previously loaded content",
+  "noPlaylistsCreatedYet": "No playlists created yet",
+  "noSubscribedPlaylistsYet": "No subscribed playlists yet",
+  "ownershipUnconfirmed": "Ownership unconfirmed",
+  "creator": "Creator: ",
+  "creator2": "Creator:",
+  "tracks5": "{arg0, plural, =0{No tracks} one{1 track} other{{arg0} tracks}}",
+  "@tracks5": {
+    "placeholders": {
+      "arg0": {
+        "type": "int"
+      }
+    }
+  },
+  "albumSubscriptionsAreUnavailable": "Album subscriptions are unavailable",
+  "couldNotLoadAlbumSubscriptionsPleaseTryAgain": "Could not load album subscriptions. Please try again",
+  "couldNotUpdateAlbumSubscriptionsShowingPreviouslyLoaded": "Could not update album subscriptions. Showing previously loaded content",
+  "noSubscribedAlbumsYet": "No subscribed albums yet",
+  "couldNotLoadPlaylists": "Could not load playlists: {arg0}",
+  "@couldNotLoadPlaylists": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "youHaveReachedTheEnd": "You have reached the end",
+  "moreCategories": "More categories",
+  "noMoreCategories": "No more categories",
+  "signInFirst": "Sign in first",
+  "signInToSaveMusicPlaylistsAndAlbums": "Sign in to save music, playlists and albums.",
+  "localTracksCannotBeAddedToOnlinePlaylists": "Local tracks cannot be added to online playlists",
+  "localTracksWereSkippedOnlyOnlineTracksWere": "Local tracks were skipped. Only online tracks were added",
+  "localPlaylistsCannotBeSubscribedToOnline": "Local playlists cannot be subscribed to online",
+  "youDoNotHaveAccessToThisPrivate": "You do not have access to this private playlist",
+  "thisPlaylistIsAlreadyInYourLibrary": "This playlist is already in your library",
+  "couldNotConfirmSubscriptionStatusPleaseTryAgain": "Could not confirm subscription status. Please try again",
+  "localAlbumsCannotBeSubscribedToOnline": "Local albums cannot be subscribed to online",
+  "clearList": "Clear list",
+  "clearLocalPlaybackHistoryForThisCategory": "Clear local playback history for this category?",
+  "clear": "Clear",
+  "tracks6": "tracks",
+  "playlists": "playlists",
+  "albums": "albums",
+  "localPlaybackHistoryKeepsTheLatest1000Items": "Local playback history · {arg0} {arg1} · Keeps the latest 1000 items per category",
+  "@localPlaybackHistoryKeepsTheLatest1000Items": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      },
+      "arg1": {
+        "type": "String"
+      }
+    }
+  },
+  "tracks7": "Tracks",
+  "lyrics": "Lyrics",
+  "subscribeToAll": "Subscribe to all",
+  "noPlaybackHistory": "No playback history",
+  "trackCount": "Track count",
+  "accessDenied": "Access denied",
+  "accessDeniedCannotSubscribe": "Access denied. Cannot subscribe",
+  "noRecommendedTracksToday": "No recommended tracks today",
+  "networkErrorCouldNotLoadTodaySRecommendations": "Network error. Could not load today's recommendations",
+  "couldNotLoadRecommendations": "Could not load recommendations: {arg0}",
+  "@couldNotLoadRecommendations": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "newTracksPickedForYourTasteEveryDay": "New tracks picked for your taste every day",
+  "recommendedPlaylists": "Recommended playlists",
+  "frequentlyPlayed": "Frequently played",
+  "viewPlaybackHistory": "View playback history >",
+  "thisResourceTypeCannotBeOpenedYet": "This resource type cannot be opened yet",
+  "minutesAgo": "{arg0, plural, one{1 minute ago} other{{arg0} minutes ago}}",
+  "@minutesAgo": {
+    "placeholders": {
+      "arg0": {
+        "type": "int"
+      }
+    }
+  },
+  "hoursAgo": "{arg0, plural, one{1 hour ago} other{{arg0} hours ago}}",
+  "@hoursAgo": {
+    "placeholders": {
+      "arg0": {
+        "type": "int"
+      }
+    }
+  },
+  "daysAgo": "{arg0, plural, one{1 day ago} other{{arg0} days ago}}",
+  "@daysAgo": {
+    "placeholders": {
+      "arg0": {
+        "type": "int"
+      }
+    }
+  },
+  "composedText2": "{arg0}/{arg1}",
+  "@composedText2": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      },
+      "arg1": {
+        "type": "String"
+      }
+    }
+  },
+  "dailyPicksJustForYou": "DAILY PICKS · Just for you",
+  "dailyRecommendations": "Daily recommendations",
+  "newTracksPickedJustForYouEveryDay": "New tracks picked just for you every day",
+  "heartbeat": "Heartbeat",
+  "heartbeatEndlessDiscovery": "HEARTBEAT · Endless discovery",
+  "heartbeatMode": "Heartbeat mode",
+  "exploreMusicThatUnderstandsYouBasedOnYour": "Explore music that understands you, based on your favorites",
+  "loadingHeartbeatRecommendations2": "Loading Heartbeat recommendations",
+  "startHeartbeatMode2": "Start Heartbeat mode",
+  "heartbeatModeLoadingRecommendations": "Heartbeat mode · Loading recommendations",
+  "heartbeatRecommendationsPausedClickToRetry": "Heartbeat recommendations paused. Click to retry",
+  "retryRecommendations": "Retry recommendations",
+  "exitHeartbeat": "Exit Heartbeat",
+  "instrumentalMusicEnjoy": "Instrumental music. Enjoy",
+  "noLyricsAvailable": "No lyrics available",
+  "loadingLyrics": "Loading lyrics…",
+  "close": "Close",
+  "nowPlaying": "Now playing",
+  "paused": "Paused",
+  "noAlbumDetailsAvailable": "No album details available",
+  "noPlayableTracks": "No playable tracks",
+  "theQueueIsEmptyPickATrackFrom": "The queue is empty. Pick a track from a playlist to start",
+  "pause": "Pause",
+  "sequential": "Sequential",
+  "loopAll": "Loop all",
+  "repeatOne": "Repeat one",
+  "shuffle": "Shuffle",
+  "sequentialFollowTheRecommendationOrderThenWaitFor": "Sequential: follow the recommendation order, then wait for new recommendations",
+  "loopAllReturnToTheFirstTrackAfter": "Loop all: return to the first track after the last",
+  "repeatOneRestartThisTrackWhenItEnds": "Repeat one: restart this track when it ends",
+  "shuffleRandomizeTheOrderWithoutChangingTheCurrent": "Shuffle: randomize the order without changing the current track",
+  "playbackPausedByASystemInterruption": "Playback paused by a system interruption",
+  "audioOutputInterruptedClickPlayToRetry": "Audio output interrupted. Click Play to retry",
+  "playbackFailed": "Playback failed",
+  "buffering": "Buffering…",
+  "preparing": "Preparing…",
+  "chooseATrackToStartListening": "Choose a track to start listening",
+  "playQueue": "Play queue",
+  "switchingAudioQuality": "Switching audio quality…",
+  "currentAudioQualityUnknownSwitching": "Current audio quality unknown. Switching…",
+  "stillPlayingAtSwitching": "Still playing at {arg0}. Switching…",
+  "@stillPlayingAtSwitching": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "chooseAudioQuality": "Choose audio quality",
+  "standard": "Standard",
+  "high": "High",
+  "lossless": "Lossless",
+  "highResolutionLosslessHiRes": "High-resolution lossless  Hi-Res",
+  "losslessSq": "Lossless (SQ)",
+  "highHq": "High (HQ)",
+  "fullerClearerHighResolutionAudioUpTo192": "Fuller, clearer high-resolution audio, up to 192 kHz / 24 bit",
+  "highFidelityLosslessAudioUpTo48Khz": "High-fidelity lossless audio, up to 48 kHz / 16 bit",
+  "nearCdQualityWithDetailedSoundUpTo": "Near-CD quality with detailed sound, up to 320 kbps",
+  "thisAudioQualityRequiresVipMembership": "This audio quality requires VIP membership",
+  "audioQuality": "Audio quality",
+  "closeAudioQualitySelection": "Close audio quality selection",
+  "closeQueue": "Close queue",
+  "showAllArtists": "Show all ({arg0, plural, one{1 artist} other{{arg0} artists}})",
+  "@showAllArtists": {
+    "placeholders": {
+      "arg0": {
+        "type": "int"
+      }
+    }
+  },
+  "collapse": "Collapse",
+  "noArtistDetailsAvailable": "No artist details available",
+  "unmute": "Unmute",
+  "mute": "Mute",
+  "volume": "Volume",
+  "playableOnly": "Playable only",
+  "excludePreviewsAndUnconfirmedSourcesShowOnlyFully": "Exclude previews and unconfirmed sources; show only fully playable tracks",
+  "audioQuality2": "Audio quality:",
+  "sqLossless": "SQ Lossless",
+  "hqHighQuality": "HQ High quality",
+  "search": "Search",
+  "search2": "Search “{arg0}”",
+  "@search2": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "searchFailed": "Search failed: {arg0}",
+  "@searchFailed": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "noMatchesAmongLoadedTracksLoadMoreTo": "No matches among {arg0} loaded tracks. Load more to continue",
+  "@noMatchesAmongLoadedTracksLoadMoreTo": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "noMatchingTracks": "No matching tracks",
+  "loadMore": "Load more",
+  "noMatchingPlaylists": "No matching playlists",
+  "noMatchingAlbums": "No matching albums",
+  "noMatchingArtists": "No matching artists",
+  "couldNotLoadMore": "Could not load more: {arg0}",
+  "@couldNotLoadMore": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "allResultsShown": "All results shown",
+  "accent": "Accent",
+  "background": "Background",
+  "panel": "Panel",
+  "text": "Text",
+  "secondaryText": "Secondary text",
+  "border": "Border",
+  "successColor": "Success color",
+  "warningColor": "Warning color",
+  "errorColor": "Error color",
+  "operationFailedPleaseTryAgain": "Operation failed. Please try again",
+  "copy": "{arg0} copy",
+  "@copy": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "deleteTheme": "Delete theme",
+  "delete2": "Delete “{arg0}”? {arg1}",
+  "@delete2": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      },
+      "arg1": {
+        "type": "String"
+      }
+    }
+  },
+  "themesAndColors": "Themes and colors",
+  "chooseAColorSchemeOrCreateYourOwn": "Choose a color scheme or create your own theme.",
+  "dark": "Dark",
+  "light": "Light",
+  "duplicate": "Duplicate",
+  "actions": "{arg0} actions",
+  "@actions": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "themeExported": "Theme exported",
+  "edit": "Edit",
+  "rename": "Rename",
+  "exportJson": "Export JSON",
+  "createCustomTheme": "Create custom theme",
+  "importedClickTheThemeToApplyIt": "Imported “{arg0}”. Click the theme to apply it",
+  "@importedClickTheThemeToApplyIt": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "importJson": "Import JSON",
+  "currentThemeAccentColor": "Current theme accent color",
+  "restoreDefaultColor": "Restore default color",
+  "renameTheme": "Rename theme",
+  "themeName": "Theme name",
+  "apply": "Apply",
+  "customThemeBadge": "Custom",
+  "customTheme": "Custom theme",
+  "textAndBackgroundContrastIsLowConsiderAdjusting": "Text and background contrast is low. Consider adjusting the colors; you can still save.",
+  "saveAndApply": "Save and apply",
+  "livePreview": "Live preview",
+  "cardAndBodyText": "Card and body text",
+  "secondaryTextAndDescriptions": "Secondary text and descriptions",
+  "textFieldPreview": "Text field preview",
+  "primaryButton": "Primary button",
+  "secondaryButton": "Secondary button",
+  "disabled": "Disabled",
+  "selectedListItem": "Selected list item",
+  "success": "Success",
+  "warning": "Warning",
+  "error": "Error",
+  "saturationAndBrightnessColorPanel": "Saturation and brightness color panel",
+  "hue": "Hue",
+  "hue2": "Hue {arg0}°",
+  "@hue2": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "hueDegrees": "Hue {arg0} degrees",
+  "@hueDegrees": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "saturation": "Saturation",
+  "saturation2": "Saturation {arg0}%",
+  "@saturation2": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "brightness": "Brightness",
+  "brightness2": "Brightness {arg0}%",
+  "@brightness2": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "hexColor": "HEX color",
+  "thePlaybackDeviceIsDisconnectedOrUnavailablePlayback": "The playback device is disconnected or unavailable. Playback stopped and switched to the default output device.",
+  "audioOutputWasInterruptedCheckTheDeviceThen": "Audio output was interrupted. Check the device, then click Play to retry.",
+  "couldNotAcquireExclusiveAccessTheDeviceMay": "Could not acquire exclusive access. The device may be busy or not support exclusive mode.",
+  "couldNotRefreshPlaybackDevicesPleaseTryAgain": "Could not refresh playback devices. Please try again.",
+  "thisVersionDoesNotProvideAudioDeviceControls": "This version does not provide audio device controls.",
+  "audioOutputFailedCheckTheDeviceAndTry": "Audio output failed. Check the device and try again.",
+  "noDevicesAvailable": "No devices available",
+  "defaultOutputDevice": "Default output device ({arg0})",
+  "@defaultOutputDevice": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "selectedDeviceUnavailable": "Selected device unavailable",
+  "exclusiveMode": "{arg0} (exclusive mode)",
+  "@exclusiveMode": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "couldNotSavePlaybackDeviceSettingsPleaseTry": "Could not save playback device settings. Please try again.",
+  "playbackDeviceSettingsAreUnavailableInThisVersion": "Playback device settings are unavailable in this version.",
+  "playbackDevice": "Playback device",
+  "refreshPlaybackDevices": "Refresh playback devices",
+  "theDeviceListHasChangedItRefreshesWhen": "The device list has changed. It refreshes when you open the selector.",
+  "exclusiveAccessToThePlaybackDevice": "Exclusive access to the playback device",
+  "acquireExclusiveAccessDuringPlaybackAndReleaseIt": "Acquire exclusive access during playback and release it when paused.",
+  "exclusivePlaybackPrefersTheTrackSSampleRate": "Exclusive playback prefers the track's sample rate and converts when unsupported. Volume is controlled by the app.",
+  "retryRefresh": "Retry refresh",
+  "cacheSettingsWereNotSavedPleaseTryAgain": "Cache settings were not saved. Please try again",
+  "clearCachedAudioAndLyrics": "Clear cached audio and lyrics?",
+  "deletesLocallyCachedAudioAndLyricsYourFavorite": "Deletes locally cached audio and lyrics. Your favorite tracks and imported local music are kept.",
+  "clear2": "Clear",
+  "gbUsedGbLimit": "{arg0} GB used · {arg1} GB limit ({arg2}%)",
+  "@gbUsedGbLimit": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      },
+      "arg1": {
+        "type": "String"
+      },
+      "arg2": {
+        "type": "String"
+      }
+    }
+  },
+  "gbAvailable": "{arg0} GB available",
+  "@gbAvailable": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "allAudioQualitiesShareTheLimitOlderUnused": "All audio qualities share the limit. Older unused cache files are removed automatically.",
+  "nextTracks": "Next tracks",
+  "entireQueue": "Entire queue",
+  "tracks8": "tracks",
+  "cacheRange": "Cache range",
+  "cacheWithinTheStorageLimitTurningOffAutomatic": "Cache within the storage limit. Turning off automatic caching keeps existing cache files.",
+  "audioAndLyricsCache": "Audio and lyrics cache",
+  "clearAudioAndLyricsCache": "Clear audio and lyrics cache",
+  "automaticallyCacheAudio": "Automatically cache audio",
+  "cacheTheSelectedAudioQualityAheadOfTime": "Cache the selected audio quality ahead of time, prioritizing current playback. Only permitted preview segments are cached.",
+  "storageLimit": "Storage limit",
+  "filesCurrentlyBeingReadAreKeptUntilReading": "Files currently being read are kept until reading finishes, then become eligible for cleanup.",
+  "couldNotSavePlaybackEffectsPleaseTryAgain": "Could not save playback effects. Please try again.",
+  "fadeInAndOut": "Fade in and out",
+  "useA300MsVolumeTransitionWhenPlaying": "Use a 300 ms volume transition when playing, pausing and switching tracks.",
+  "normalizeTrackVolume": "Normalize track volume",
+  "useTheTrackSGainDataToBalance": "Use the track's gain data to balance volume. Tracks without gain data keep their original volume.",
+  "playbackEffectsAreUnavailableInThisVersion": "Playback effects are unavailable in this version.",
+  "thisVersionHasNoAudioQualityPreferenceStorage": "This version has no audio quality preference storage, so audio quality cannot be selected here.",
+  "selectedPreference": "Selected preference",
+  "actualPlaybackQuality": "Actual playback quality",
+  "losslessAndHiResAudioRequireVipMembership": "Lossless and Hi-Res audio require VIP membership.",
+  "account": "Account",
+  "general": "General",
+  "shortcuts": "Shortcuts",
+  "about": "About",
+  "addSwitchAndSignOutOfAccounts": "Add, switch and sign out of accounts",
+  "appearanceAndGeneralAppBehavior": "Appearance and general app behavior",
+  "defaultPlaybackAndQueueBehavior": "Default playback and queue behavior",
+  "keyboardShortcutsAndQuickActions": "Keyboard shortcuts and quick actions",
+  "audioQualityPreferencesForOnlinePlayback": "Audio quality preferences for online playback",
+  "versionAndProjectInformation": "Version and project information",
+  "version": "Version",
+  "thereAreNoSettingsToAdjustHereYet": "There are no settings to adjust here yet. Options will be added when the corresponding features are ready.",
+  "versionAndProjectInformationWillBeAddedIn": "This project explores the NetEase Cloud Music service as an open-source technical project. It does not provide or distribute music. Music rights belong to the platform and respective rights holders; this project is not affiliated with or authorized by NetEase Cloud Music.",
+  "githubProject": "Go to GitHub",
+  "neteaseOfficialWebsite": "NetEase Cloud Music website",
+  "openSourceProjectDeclaration": "Open-source project notice",
+  "unverified": "Unverified",
+  "thisQualityTierHasNotBeenVerifiedAgainst": "This quality tier has not been verified against real service responses and cannot be selected yet.",
+  "shortcutsAreAvailableOnlyInTheMacosApp": "Shortcuts are available only in the macOS app",
+  "accountOperationFailedRetryOrRemoveTheAccount": "Account operation failed. Retry or remove the account from this device",
+  "removeAccountFromThisDevice": "Remove account from this device?",
+  "deletesLocalSignInInformationPrivateCacheAnd": "Deletes local sign-in information, private cache and playback history for {arg0}. The remote session will remain active.",
+  "@deletesLocalSignInInformationPrivateCacheAnd": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "remove": "Remove",
+  "accountManagementIsUnavailableInThisVersion": "Account management is unavailable in this version.",
+  "notSignedInUsingAsALocalGuest": "Not signed in · Using as a local guest",
+  "signInAgainRequired": "Sign in again required",
+  "currentlyActive": "Currently active · {arg0}",
+  "@currentlyActive": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "signInAgain": "Sign in again",
+  "switch2": "Switch",
+  "accountActions2": "Account actions",
+  "signOut2": "Sign out",
+  "removeFromThisDevice": "Remove from this device",
+  "addAccount": "Add account",
+  "retryRestoringSignIn": "Retry restoring sign-in",
+  "retryRestoringPlaybackHistory": "Retry restoring playback history",
+  "accountSwitchedButPlaybackHistoryCouldNotBe": "Account switched, but playback history could not be restored. Please try again",
+  "anAuroraInspiredHighResolutionMusicExperience": "Restore a pure listening experience with high-fidelity audio.",
+  "notSet": "Not set",
+  "description": "Description",
+  "globalShortcuts": "Global shortcuts",
+  "enableGlobalShortcuts": "Enable global shortcuts",
+  "respondEvenWhenTheAppIsInThe": "Respond even when the app is in the background",
+  "useSystemMediaShortcuts": "Use system media shortcuts",
+  "mediaKeysAndControlCenterPlayPauseSkip": "Media keys and Control Center: play, pause, skip, stop and seek",
+  "globalShortcutsAndSystemMediaControlsAreAvailable": "Global shortcuts and system media controls are available only in supported native desktop apps",
+  "restoreDefaults": "Restore defaults",
+  "unsupportedKeyUseLettersNumbersArrowsOrFunction": "Unsupported key. Use letters, numbers, arrows or function keys",
+  "composedText3": "{arg0} · {arg1}",
+  "@composedText3": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      },
+      "arg1": {
+        "type": "String"
+      }
+    }
+  },
+  "saving2": "Saving…",
+  "listeningForKeyInput": "Listening for key input…",
+  "pressANewKeyCombinationPressEscTo": "Press a new key combination. Press Esc to cancel",
+  "clearBinding": "Clear binding",
+  "couldNotLoadFavoriteTracksPleaseTryAgain": "Could not load favorite tracks. Please try again",
+  "theOperationIsInProgressOrItsResult": "The operation is in progress or its result is pending. Verify it first",
+  "operationSucceededButRefreshFailedRefreshThePage": "Operation succeeded, but refresh failed. Refresh the page",
+  "operationSucceeded": "Operation succeeded",
+  "accountChangedThePreviousOperationSResultWas": "Account changed. The previous operation's result was ignored",
+  "resultPendingVerifyLaterItWillNotBe": "Result pending. Verify later; it will not be retried automatically",
+  "verifiedSuccessfullyButRefreshFailedRefreshThePage": "Verified successfully, but refresh failed. Refresh the page",
+  "theExpectedStateWasNotReachedAndRefresh": "The expected state was not reached and refresh failed",
+  "verifiedOperationSucceeded": "Verified: operation succeeded",
+  "verifiedTheRemoteStateHasNotChangedYou": "Verified: the remote state has not changed. You can try again",
+  "resultPendingVerificationFailedVerifyLater": "Result pending. Verification failed; verify later",
+  "noOperationsToVerify": "No operations to verify",
+  "onlyNeteaseCloudMusicAlbumsAreSupported": "Only NetEase Cloud Music albums are supported",
+  "selectTracksFirst": "Select tracks first",
+  "skippedTracks": "{arg0}; skipped {arg1} {arg2} tracks",
+  "@skippedTracks": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      },
+      "arg1": {
+        "type": "String"
+      },
+      "arg2": {
+        "type": "String"
+      }
+    }
+  },
+  "description2": "Description",
+  "tags2": "Tags",
+  "succeeded": "{arg0} succeeded",
+  "@succeeded": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "composedText4": "{arg0}. {arg1}",
+  "@composedText4": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      },
+      "arg1": {
+        "type": "String"
+      }
+    }
+  },
+  "operationFailedRefreshAndTryAgain": "Operation failed. Refresh and try again",
+  "signInAgain2": "Sign in again",
+  "youDoNotHavePermissionToModifyThis": "You do not have permission to modify this playlist",
+  "playlistTracksAreNotFullyLoadedRetryLoading": "Playlist tracks are not fully loaded. Retry loading",
+  "thePlaylistChangedOrTracksAreMissingReload": "The playlist changed or tracks are missing. Reload before reordering",
+  "resultPending": "Result pending",
+  "unexpectedServiceResponseResultPending": "Unexpected service response. Result pending",
+  "operationFailed": "Operation failed ({arg0})",
+  "@operationFailed": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "accountOperationFailedPleaseTryAgain": "Account operation failed. Please try again",
+  "linuxKeyringLocked": "The Linux keyring is locked. Unlock it and try again. Saved account data is unchanged.",
+  "linuxSecretServiceUnavailable": "Linux Secret Service is unavailable. No credentials were stored or removed.",
+  "linuxCredentialSaveFailed": "The Linux keyring did not confirm saving credentials. Existing account data was kept.",
+  "linuxCredentialDeleteFailed": "You are signed out on this device, but the keyring did not confirm credential deletion. Unlock it and retry; this account will not be restored at startup.",
+  "couldNotRestorePlaybackHistoryPleaseTryAgain": "Could not restore playback history. Please try again",
+  "couldNotRestoreSignInPleaseTryAgain": "Could not restore sign-in. Please try again later",
+  "theLocalMusicServiceIsStillStartingPlease": "The local music service is still starting. Please try again later",
+  "theLocalMusicServiceCouldNotStartRestart": "The local music service could not start. Restart the app and try again",
+  "timedOutObtainingTheQrCodeCheckYour": "Timed out obtaining the QR code. Check your network and try again",
+  "couldNotConnectToTheMusicServiceCheck": "Could not connect to the music service. Check your network and try again",
+  "tooManyRequestsWaitBeforeObtainingAnotherQr": "Too many requests. Wait before obtaining another QR code",
+  "neteaseIsTemporarilyUnavailablePleaseTryAgainLater": "NetEase is temporarily unavailable. Please try again later",
+  "theMusicServiceReturnedAnInvalidQrCode": "The music service returned an invalid QR code",
+  "couldNotObtainQrCodeTryAgainLater": "Could not obtain QR code. Try again later ({arg0})",
+  "@couldNotObtainQrCodeTryAgainLater": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "theQrCodeExpiredRefreshAndTryAgain": "The QR code expired. Refresh and try again",
+  "goodMorning": "Good morning",
+  "goodAfternoon": "Good afternoon",
+  "goodEvening": "Good evening",
+  "invalidNeteaseCloudMusicIdOrShareLink": "Invalid NetEase Cloud Music ID or share link",
+  "theLocalMusicServiceIsStartingPleaseTry": "The local music service is starting. Please try again later",
+  "theLocalMusicServiceCouldNotStartRestart2": "The local music service could not start. Restart the app or use a remote service",
+  "theDeviceIdFileIsCorruptCheckThe": "The device ID file is corrupt. Check the app data and try again",
+  "couldNotReadOrSaveTheDeviceId": "Could not read or save the device ID. Check the app data directory and try again",
+  "trackNotFoundCheckTheId": "Track not found. Check the ID",
+  "albumNotFoundCheckTheId": "Album not found. Check the ID",
+  "artistNotFoundCheckTheId": "Artist not found. Check the ID",
+  "playlistNotFoundCheckTheId": "Playlist not found. Check the ID",
+  "theTrackSPlaybackUrlIsUnavailableVip": "The track's playback URL is unavailable; VIP membership or copyright restrictions may apply",
+  "thisContentSourceDoesNotSupportThisOperation": "This content source does not support this operation yet",
+  "theMusicServiceReturnedUnrecognizedData": "The music service returned unrecognized data",
+  "musicServiceConnectionTimedOutPleaseTryAgain": "Music service connection timed out. Please try again later",
+  "couldNotConnectToTheMusicServiceCheck2": "Could not connect to the music service. Check your network and try again",
+  "tooManyRequestsPleaseTryAgainLater": "Too many requests. Please try again later",
+  "theMusicServiceIsTemporarilyUnavailablePleaseTry": "The music service is temporarily unavailable. Please try again later",
+  "theMusicServiceReturnedUnusuallyLargeDataReading": "The music service returned unusually large data. Reading stopped",
+  "theMusicServiceRejectedThisRequestPleaseTry": "The music service rejected this request. Please try again later",
+  "onlyAPreviewIsAvailableMembershipIsRequired": "Only a preview is available. Membership is required for full playback",
+  "signInToYourNeteaseAccountToContinue": "Sign in to your NetEase account to continue",
+  "noCredentialsWereObtainedAfterPhoneConfirmationScan": "No credentials were obtained after phone confirmation. Scan again to sign in",
+  "signInStateChangedScanAgainToSign": "Sign-in state changed. Scan again to sign in",
+  "noCredentialsFoundForThisAccountRemoteSign": "No credentials found for this account. Remote sign-out could not be verified",
+  "neteaseDidNotConfirmSignOutPleaseTry": "NetEase did not confirm sign-out. Please try again later",
+  "neteaseStillAcceptsTheseCredentialsSignOutIs": "NetEase still accepts these credentials. Sign-out is incomplete; try again later",
+  "thisAccountDoesNotHavePermissionToPlay": "This account does not have permission to play this track",
+  "couldNotObtainTrackInformation": "Could not obtain track information ({arg0})",
+  "@couldNotObtainTrackInformation": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "vipMembershipExpiredPlaybackStopped": "VIP membership expired. Playback stopped",
+  "thisSegmentIsNotCachedConnectToThe": "This segment is not cached. Connect to the internet to continue",
+  "signInToUseHeartbeatMode": "Sign in to use Heartbeat mode",
+  "noPlayableFavoriteTracksAddSomeFavoritesFirst": "No playable favorite tracks. Add some favorites first",
+  "noNewHeartbeatRecommendationsPleaseTryAgainLater": "No new Heartbeat recommendations. Please try again later",
+  "couldNotLoadHeartbeatRecommendationsCheckYourNetwork": "Could not load Heartbeat recommendations. Check your network or try again later",
+  "severalHeartbeatTracksAreRestrictedByCopyrightRefresh": "Several Heartbeat tracks are restricted by copyright. Refresh later",
+  "thisFileCannotBeDecodedAndWasSkipped": "This file cannot be decoded and was skipped",
+  "couldNotOpenThisFile": "Could not open this file",
+  "thisFileContainsNoAudio": "This file contains no audio",
+  "decodingFailedTrackSkipped": "Decoding failed. Track skipped",
+  "thisVersionHasNoDecoder": "This version has no decoder",
+  "thisFileDoesNotSupportSeeking": "This file does not support seeking",
+  "noAudioDeviceAvailable": "No audio device available",
+  "couldNotOpenTheAudioDevice": "Could not open the audio device",
+  "couldNotStartThePlaybackThread": "Could not start the playback thread",
+  "thePlayQueueIsEmpty": "The play queue is empty",
+  "thisItemIsNotInTheQueue": "This item is not in the queue",
+  "theQueueJustChangedPleaseTryAgain": "The queue just changed. Please try again",
+  "youHaveReachedTheEndOfTheQueue": "You have reached the end of the queue",
+  "thisCommandHasAlreadyBeenExecuted": "This command has already been executed",
+  "thePlayerRejectedThisCommand": "The player rejected this command",
+  "thePlayerDoesNotSupportThisOperationYet": "The player does not support this operation yet",
+  "playerAndInterfaceVersionsDoNotMatch": "Player and interface versions do not match",
+  "thePlaybackSessionWasRecreated": "The playback session was recreated",
+  "thePlayerIsNotConnectedYet": "The player is not connected yet",
+  "thePlayerIsClosed": "The player is closed",
+  "thePlayerDidNotRespondPleaseTryAgain": "The player did not respond. Please try again",
+  "thePlayerRejectedThisMessage": "The player rejected this message",
+  "thePlayerHasBeenReleased": "The player has been released",
+  "internalPlayerError": "Internal player error",
+  "preferenceUpdatedItWillTakeEffectLaterFor": "Preference updated. It will take effect later for the current track",
+  "playbackError": "Playback error ({arg0})",
+  "@playbackError": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "standardQuality": "Standard quality",
+  "highQualityHq": "High quality (HQ)",
+  "losslessQualitySq": "Lossless quality (SQ)",
+  "highResolutionLosslessHiRes2": "High-resolution lossless (Hi-Res)",
+  "usesLessDataAndPrefersStandardQualityReducing": "Uses less data and prefers standard quality, reducing buffering on slower connections.",
+  "prefersHighQualityFallingBackToLowerAnd": "Prefers high quality, falling back to lower and then standard quality when unavailable.",
+  "prefersLosslessQualityFallingBackToHighLower": "Prefers lossless quality, falling back to high, lower and then standard quality when unavailable.",
+  "prefersHighResolutionLosslessFallingBackToLossless": "Prefers high-resolution lossless, falling back to lossless when unavailable.",
+  "yourChoiceRequestsAPreferredQualityButDoes": "Your choice requests a preferred quality but does not guarantee playback at that tier. Track limits, account permissions and service availability may lower it. The actual source quality is shown below.",
+  "couldNotReadOrWriteLocalPlaybackHistory": "Could not read or write local playback history. Please try again",
+  "colorMustUseRrggbbFormat": "Color must use #RRGGBB format",
+  "aThemeRequiresNineOpaqueSemanticColors": "A theme requires nine opaque semantic colors",
+  "invalidThemeFormatOrVersion": "Invalid theme format or version",
+  "aThemeMustContainNineSemanticColors": "A theme must contain nine semantic colors",
+  "unknownArtist": "Unknown artist",
+  "loadingTrackInformation": "Loading track information",
+  "unknownAlbum": "Unknown album",
+  "neteaseRecommendations": "NetEase recommendations",
+  "creator3": "Creator: {arg0}",
+  "@creator3": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "yourDailyMix": "Your daily mix",
+  "communityPicks": "Community picks",
+  "communityCurated": "Community curated",
+  "recentlyPlayedPlaylists": "Recently played playlists",
+  "charts": "Charts",
+  "officialChart": "Official chart",
+  "unknownPlaylist": "Unknown playlist",
+  "neteasePlaylist": "NetEase playlist",
+  "unknownArtist2": "Unknown artist",
+  "composedText5": "{arg0}",
+  "@composedText5": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "track": "Track",
+  "neteaseUser": "NetEase user",
+  "unknownResource": "Unknown resource",
+  "languageSettings": "Language",
+  "languageFollowSystem": "Follow system",
+  "languageSaveFailed": "Language settings could not be saved. The previous setting will be used next time.",
+  "languageSaving": "Saving language settings…",
+  "trayShow": "Show Fideflow",
+  "hotkeyOccupied": "The shortcut is already in use or unsupported",
+  "hotkeyLayoutChanged": "Shortcuts are unavailable after the keyboard layout changed. Enable global shortcuts again",
+  "hotkeyRegistrationFailed": "Global shortcut registration failed. Enable global shortcuts again",
+  "unsupportedAction": "This action is not supported",
+  "unsupportedGlobalShortcut": "This global shortcut is not supported",
+  "duplicateShortcut": "Duplicate shortcut",
+  "themeDeletionFallback": "Appearance will switch to MaterialDark.",
+  "playlistCreatedPrefix": "Playlist created; ",
+  "newPlaylistKeptPrefix": "New playlist kept; ",
+  "networkError": "Network error",
+  "vipMembershipRequired": "VIP required",
+  "unknownTrack": "Unknown track",
+  "likeTracks": "Like tracks",
+  "playlistActions": "Playlist actions",
+  "desktopPreview": "Preview",
+  "instanceLockFailed": "Could not acquire the player instance lock.",
+  "keyboardTab": "Tab",
+  "keyboardHome": "Home",
+  "keyboardEnd": "End",
+  "keyboardPageUp": "Page Up",
+  "keyboardPageDown": "Page Down",
+  "keyboardDelete": "Delete",
+  "invalidModifier": "Invalid modifier",
+  "invalidShortcutConfiguration": "Invalid shortcut configuration",
+  "missingBindings": "Missing bindings",
+  "conflictingShortcuts": "Conflicting shortcuts",
+  "keyboardUnsupportedKey": "Unsupported key",
+  "tracksAlreadyPresent": "already present",
+  "tracksNotPresent": "missing",
+  "remoteInformationRefreshed": "Remote information refreshed. Correct the failed fields and try again",
+  "menuEdit": "Edit",
+  "menuView": "View",
+  "menuWindow": "Window",
+  "menuAbout": "About Fideflow",
+  "menuHide": "Hide Fideflow",
+  "menuHideOthers": "Hide others",
+  "menuShowAll": "Show all",
+  "menuQuit": "Quit Fideflow",
+  "menuUndo": "Undo",
+  "menuRedo": "Redo",
+  "menuCut": "Cut",
+  "menuCopy": "Copy",
+  "menuPaste": "Paste",
+  "menuPasteStyle": "Paste and match style",
+  "menuDelete": "Delete",
+  "menuSelectAll": "Select all",
+  "menuFullScreen": "Full screen",
+  "menuCloseWindow": "Close window",
+  "menuMinimize": "Minimize",
+  "menuZoom": "Zoom",
+  "menuBringAllFront": "Bring all to front",
+  "languageNameEnglish": "English",
+  "languageNameSimplified": "简体中文",
+  "debugExportCookie": "Export Cookie",
+  "debugCookieCopied": "Cookie copied to clipboard",
+  "debugCookieExportFailed": "Could not export Cookie. Sign in again and retry.",
+  "clickToSignIn": "Click to sign in",
+  "collapseSidebar": "Collapse sidebar",
+  "expandSidebar": "Expand sidebar",
+  "playlistDetails": "Playlist details",
+  "albumDetails": "Album details",
+  "artistDetails": "Artist details",
+  "themeToneOledBlack": "OLED Black",
+  "themeToneCoolDark": "Cool Slate",
+  "themeToneWarmNight": "Warm Night",
+  "themeTonePureWhite": "Pure White",
+  "themeToneWarmWhite": "Warm Paper",
+  "themeBaseToneStep": "Step 1: Base Tone",
+  "themeAccentStep": "Step 2: Accent Color",
+  "themeAdvancedTuning": "Advanced fine-tuning",
+  "themeCollapseSlots": "Collapse",
+  "themeExpandSlots": "Expand 9 color slots",
+  "themeSlotOverrideHelp": "Fine-tuned slots are preserved when changing the base tone.",
+  "dailyStartWithSong": "Start with “{title}”",
+  "dailyTasteSubtitle": "Picked for your music taste",
+  "heartbeatExploreSubtitle": "Explore from your liked songs",
+  "@dailyStartWithSong": {
+    "placeholders": {
+      "title": {
+        "type": "String"
+      }
+    }
+  },
+  "mobilePlaybackStartupFailed": "Music playback could not start",
+  "resamplingEnabled": "Enable resampling",
+  "resamplingTargetSampleRate": "Target sample rate",
+  "resamplingDescription": "Resample only when the track’s sample rate differs from the target. Output uses float32 PCM. Shared output may be adapted further by the system.",
+  "resamplingExclusiveDescription": "Exclusive output uses the target sample rate. Playback stops with an error if the device cannot accept it.",
+  "resamplingAutomaticDescription": "When disabled, shared playback follows the system sample rate; exclusive playback negotiates the track’s sample rate. The selected target is remembered.",
+  "resamplingAutomaticSharedDescription": "When disabled, playback follows the system’s current sample rate. The selected target is remembered.",
+  "phoneSignIn": "Phone sign-in",
+  "qrSignIn": "QR sign-in",
+  "phoneNumber": "Phone number",
+  "countryCallingCode": "Calling code",
+  "smsCode": "SMS code",
+  "sendLoginCode": "Send code",
+  "resendLoginCode": "Resend in {seconds}s",
+  "submitPhoneLogin": "Sign in",
+  "phoneInvalid": "Enter a valid calling code and phone number",
+  "phoneNotRegistered": "This number is not registered. Register in NetEase Cloud Music first",
+  "codeInvalid": "Incorrect code. Check it and try again",
+  "codeExpired": "The code has expired. Request a new code",
+  "loginVerificationRequired": "Additional security verification is required. Retry or use QR sign-in",
+  "smsSendFailed": "Could not send the code. Try again later",
+  "phoneLoginFailed": "Could not sign in. Retry or use QR sign-in",
+  "loginRateLimited": "Too many requests. Try again later",
+  "@resendLoginCode": {
+    "placeholders": {
+      "seconds": {
+        "type": "int"
+      }
+    }
+  }
+}

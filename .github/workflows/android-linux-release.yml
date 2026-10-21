@@ -1,0 +1,82 @@
+name: Android 签名打包（Linux）
+on:
+  workflow_dispatch:
+  workflow_call:
+permissions:
+  contents: read
+concurrency:
+  group: android-linux-release-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: false
+jobs:
+  package:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 120
+    environment: release
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: 校验标签版本
+        if: github.ref_type == 'tag'
+        shell: bash
+        run: |
+          version=$(sed -n 's/^version:[[:space:]]*//p' apps/fideflow_flutter/pubspec.yaml | tr -d '\r')
+          test "$GITHUB_REF_NAME" = "v${version%%+*}"
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+      - uses: subosito/flutter-action@v2
+        with:
+          flutter-version: '3.47.5'
+          channel: stable
+      - uses: android-actions/setup-android@v4
+      - name: 安装构建依赖
+        shell: bash
+        run: |
+          set -euo pipefail
+          sudo apt-get update
+          sudo apt-get install -y build-essential autoconf automake libtool pkg-config nasm cmake ninja-build python3
+          rustup target add aarch64-linux-android x86_64-linux-android
+          sdkmanager 'ndk;28.2.13676358' 'build-tools;36.0.0' 'platforms;android-36'
+          sdk="${ANDROID_SDK_ROOT:-${ANDROID_HOME:?Android SDK is not configured}}"
+          echo "ANDROID_SDK_ROOT=$sdk" >> "$GITHUB_ENV"
+          echo "ANDROID_NDK_HOME=$sdk/ndk/28.2.13676358" >> "$GITHUB_ENV"
+          flutter pub get --enforce-lockfile
+      - name: 构建签名 APK
+        shell: bash
+        env:
+          FIDEFLOW_ANDROID_KEYSTORE_BASE64: ${{ secrets.FIDEFLOW_ANDROID_KEYSTORE_BASE64 }}
+          FIDEFLOW_ANDROID_KEYSTORE_PASSWORD: ${{ secrets.FIDEFLOW_ANDROID_KEYSTORE_PASSWORD }}
+          FIDEFLOW_ANDROID_KEY_ALIAS: ${{ secrets.FIDEFLOW_ANDROID_KEY_ALIAS }}
+          FIDEFLOW_ANDROID_KEY_PASSWORD: ${{ secrets.FIDEFLOW_ANDROID_KEY_PASSWORD }}
+          FIDEFLOW_ANDROID_KEYSTORE_PATH: ${{ runner.temp }}/fideflow-release.jks
+        run: |
+          set -euo pipefail
+          : "${FIDEFLOW_ANDROID_KEYSTORE_BASE64:?Missing keystore secret}"
+          : "${FIDEFLOW_ANDROID_KEYSTORE_PASSWORD:?Missing keystore password}"
+          : "${FIDEFLOW_ANDROID_KEY_ALIAS:?Missing key alias}"
+          : "${FIDEFLOW_ANDROID_KEY_PASSWORD:?Missing key password}"
+          umask 077
+          trap 'rm -f "$FIDEFLOW_ANDROID_KEYSTORE_PATH"' EXIT
+          printf '%s' "$FIDEFLOW_ANDROID_KEYSTORE_BASE64" | base64 --decode > "$FIDEFLOW_ANDROID_KEYSTORE_PATH"
+          unset FIDEFLOW_ANDROID_KEYSTORE_BASE64
+          bash tooling/release/android/package-linux.sh
+      - name: 清理签名文件
+        if: always()
+        shell: bash
+        run: rm -f "$RUNNER_TEMP/fideflow-release.jks"
+      - name: 整理 Release 文件
+        id: assets
+        shell: bash
+        run: |
+          version=$(sed -n 's/^version:[[:space:]]*//p' apps/fideflow_flutter/pubspec.yaml | tr -d '\r')
+          echo "version=$version" >> "$GITHUB_OUTPUT"
+          python3 tooling/release/github_assets.py --source "build/release/android/$version" \
+            --output build/github-assets/android --platform android --arch universal --revision "$GITHUB_SHA" --version "$version"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: Fideflow-android-universal-${{ steps.assets.outputs.version }}
+          path: build/github-assets/android/*
+          if-no-files-found: error
+          retention-days: 14

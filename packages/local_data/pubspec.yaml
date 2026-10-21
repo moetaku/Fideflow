@@ -1,0 +1,16 @@
+name: fideflow_local_data
+description: Persistence ports and development adapters for Fideflow.
+version: 0.1.0
+publish_to: none
+resolution: workspace
+
+environment:
+  sdk: ^3.12.2
+
+dependencies:
+  sqlite3: ^2.4.6
+  fideflow_domain: ^0.1.0
+
+dev_dependencies:
+  test: ^1.26.0
+

@@ -1,0 +1,5 @@
+# The `native` tag marks checks that need a built native library.
+# The ABI check finds local app/Cargo builds automatically.
+# FF_MEDIA_CORE_LIBRARY overrides the discovered library.
+tags:
+  native:

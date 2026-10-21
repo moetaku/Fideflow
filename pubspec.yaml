@@ -1,0 +1,22 @@
+name: fideflow_workspace
+description: Fideflow monorepo workspace.
+publish_to: none
+version: 0.1.0
+
+environment:
+  sdk: ^3.12.2
+
+workspace:
+  - apps/fideflow_flutter
+  - packages/application
+  - packages/design_system
+  - packages/domain
+  - packages/local_data
+  - packages/media_host
+  - packages/media_sdk
+  - packages/ncm_gateway
+
+dev_dependencies:
+  fideflow_domain: ^0.1.0
+  lints: ^6.0.0
+
